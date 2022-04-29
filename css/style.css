@@ -1,0 +1,118 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fcfaf7;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	/* padding: 2rem; */
+	width: 100vw;
+	position: absolute;
+  z-index: 1;
+}
+
+h1,
+span {
+	font-family: sans-serif;
+	font-weight: lighter;
+	color: #001aa1;
+}
+
+.logo {
+  box-sizing: content-box;
+	max-height: 50px;
+  padding: 2rem;
+  border-right: 2px solid #001aa1;
+  border-bottom: 2px solid #001aa1;
+  background: #fcfaf7;
+  z-index: 1;
+}
+
+.menu-toggle {
+	font-size: 1.1rem;
+	cursor: pointer;
+  margin: 2rem;
+}
+
+.heading-container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+	min-width: 100%;
+  z-index: 1;
+}
+
+h1 {
+	text-align: center;
+	width: 55%;
+	margin: 0;
+	margin-top: -3rem;
+}
+
+.flowing-containers {
+  display: flex;
+  overflow: hidden;
+}
+
+.flowing-pictures, .flowing-pictures2 {
+	min-width: 100vw;
+	height: 100vh;
+	position: relative;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.flowing-pictures {
+  animation-name: flow-left;
+}
+
+.flowing-pictures2 {
+  animation-name: flow-left-offset;
+}
+
+@keyframes flow-left {
+  from {transform: translateX(0%)}
+  to {transform: translateX(-100%)}
+}
+
+@keyframes flow-left-offset {
+  from {transform: translateX(0)}
+  to {transform: translateX(-100%)}
+}
+
+.flowing {
+	position: absolute;
+}
+
+.pic1 {
+	/* width: 12.3%; */
+	height: 27.09%;
+	left: 0;
+	top: 19.76%;
+}
+.pic2 {
+	/* width: 31.48%; */
+	height: 23.73%;
+	top: 57.54%;
+	left: 9.19%;
+}
+.pic3 {
+	/* width: 28.24%; */
+	height: 29.12%;
+	top: 0;
+	left: 39.95%;
+}
+.pic4 {
+	/* width: 20.64%; */
+	height: 49.08%;
+	right: 4.23%;
+	bottom: 4.5%;
+}
