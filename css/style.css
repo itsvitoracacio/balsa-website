@@ -2,40 +2,53 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--balsa-blue: #001aa1;
+	--bg-light: #fcfaf7;
+}
+
 body {
-	background-color: #fcfaf7;
+	background-color: var(--bg-light);
 }
 
 header {
 	display: flex;
 	justify-content: space-between;
-	/* padding: 2rem; */
+	padding: 2rem;
 	width: 100vw;
 	position: absolute;
-  z-index: 1;
+	/* z-index: 1; */
 }
 
 h1,
 span {
 	font-family: sans-serif;
 	font-weight: lighter;
-	color: #001aa1;
+	color: var(--balsa-blue);
 }
 
 .logo {
-  box-sizing: content-box;
 	max-height: 50px;
+	z-index: 1;
+	/* box-sizing: content-box;
   padding: 2rem;
   border-right: 2px solid #001aa1;
   border-bottom: 2px solid #001aa1;
   background: #fcfaf7;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .menu-toggle {
 	font-size: 1.1rem;
+	z-index: 1;
+	height: 1.1rem;
 	cursor: pointer;
-  margin: 2rem;
+	/* margin: 2rem; */
+}
+
+#atf {
+	position: relative;
+	/* overflow-x: hidden; */
 }
 
 .heading-container {
@@ -43,9 +56,8 @@ span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100%;
-	min-width: 100%;
-  z-index: 1;
+	min-height: 100vh;
+	min-width: 100vw;
 }
 
 h1 {
@@ -53,50 +65,43 @@ h1 {
 	width: 55%;
 	margin: 0;
 	margin-top: -3rem;
+	/* z-index: 1; */
 }
 
-.flowing-containers {
-  display: flex;
-  overflow: hidden;
-}
-
-.flowing-pictures, .flowing-pictures2 {
+.flowing-pics-container {
 	min-width: 100vw;
 	height: 100vh;
 	position: relative;
-  animation-duration: 30s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.flowing-pictures {
-  animation-name: flow-left;
-}
-
-.flowing-pictures2 {
-  animation-name: flow-left-offset;
+	z-index: -1;
+	animation-duration: 10s; /* 30s */
+	/* animation-fill-mode: both; */
+	/* animation-name: flow-left; */
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 
 @keyframes flow-left {
-  from {transform: translateX(0%)}
-  to {transform: translateX(-100%)}
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
 }
 
-@keyframes flow-left-offset {
-  from {transform: translateX(0)}
-  to {transform: translateX(-100%)}
-}
-
-.flowing {
+.flowing-pics {
 	position: absolute;
+}
+
+.flowing-pics:hover {
+	/* cursor: crosshair; */
 }
 
 .pic1 {
 	/* width: 12.3%; */
 	height: 27.09%;
-	left: 0;
 	top: 19.76%;
+	left: 0;
 }
 .pic2 {
 	/* width: 31.48%; */
