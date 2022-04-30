@@ -1,0 +1,41 @@
+body {
+  cursor: none;
+}
+
+.inner-cursor,
+.outer-cursor {
+	border-radius: 50%;
+	position: absolute;
+	z-index: 0;
+  top: -100px;
+  left: -100px;
+}
+
+.inner-cursor {
+	background-color: var(--balsa-blue);
+	width: 5px;
+	height: 5px;
+}
+
+.outer-cursor {
+	border: 1px solid var(--balsa-blue);
+	width: 4px;
+	height: 4px;
+	padding: 0.75rem;
+	/* transition-duration: 200ms; */
+	/* transition-timing-function: ease-out; */
+	background-color: transparent;
+}
+
+.cursorClick {
+	animation: cursorClick .2s forwards;
+}
+
+@keyframes cursorClick {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(.7);
+	}
+}
