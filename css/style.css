@@ -4,11 +4,11 @@
 
 :root {
 	--balsa-blue: #001aa1;
-	--bg-light: #fcfaf7;
+	--light-bg: #fcfaf7;
 }
 
 body {
-	background-color: var(--bg-light);
+	background-color: var(--light-bg);
 }
 
 header {
