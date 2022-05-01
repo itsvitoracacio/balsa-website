@@ -9,13 +9,42 @@
 		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body>
-		<div class="inner-cursor"></div>
+		<!-- <div class="inner-cursor"></div> -->
 		<!-- <div class="outer-cursor"></div> -->
 		<div class="page-loader-container">
-			<div class="line-across line-top"></div>
-			<div class="line-across line-bottom"></div>
+			<div class="big-rectangle rect-top"></div>
+			<div class="big-rectangle rect-bottom"></div>
 			<div class="loader-circle"></div>
 			<div class="loader-big-circle"></div>
+			<!-- <svg
+				width="400"
+				height="400"
+				viewPort="0 0 400 400"
+				version="1.1"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					id="bowl"
+					fill-rule="evenodd"
+					fill="var(--light-bg)"
+					d="M194.115,136.050 C234.545,136.050 267.321,168.722 267.321,209.025 C267.321,249.328 234.545,282.000 194.115,282.000 C153.684,282.000 120.909,249.328 120.909,209.025 C120.909,168.722 153.684,136.050 194.115,136.050 Z"
+				/>
+
+				<path
+					id="liquid"
+					fill-rule="evenodd"
+					clip-path="url(#clipPath)"
+					fill="var(--balsa-blue)"
+					d="M194.115,136.050 C234.545,136.050 267.321,168.722 267.321,209.025 C267.321,249.328 234.545,282.000 194.115,282.000 C153.684,282.000 120.909,249.328 120.909,209.025 C120.909,168.722 153.684,136.050 194.115,136.050 Z"
+				/>
+
+				<clipPath id="clipPath">
+					<path
+						id="clippingPath"
+						d="M802.000,464.000 C802.000,464.000 401.000,464.000 401.000,464.000 C401.000,464.000 400.000,464.000 400.000,464.000 C400.000,464.000 -1.000,464.000 -1.000,464.000 C-1.000,464.000 -2.498,292.434 -1.000,240.000 C103.869,240.000 120.123,189.000 200.000,189.000 C274.426,189.000 300.545,239.829 400.511,239.996 C504.916,239.829 521.255,189.000 601.000,189.000 C675.549,189.000 701.625,240.000 802.000,240.000 C799.004,240.000 802.000,464.000 802.000,464.000 Z"
+					/>
+				</clipPath>
+			</svg> -->
 		</div>
 		<header>
 			<img src="./assets/logo-balsa.png" alt="logo" class="logo" />
@@ -31,15 +60,29 @@
 				</div>
 				<!-- <div class="flowing-pics-container"> -->
 				<div class="flowing-pics-slide">
-					<img class="flowing-pics pic1" src="./assets/frame-1.png" alt="" />
-					<img class="flowing-pics pic2" src="./assets/frame-2.png" alt="" />
-					<img class="flowing-pics pic3" src="./assets/frame-3.png" alt="" />
-					<img class="flowing-pics pic4" src="./assets/frame-4.png" alt="" />
+					<div class="flowing-pic-wrapper pic1">
+						<img class="flowing-pics" src="./assets/frame-1.png" alt="" />
+					</div>
+					<div class="flowing-pic-wrapper pic2">
+						<img class="flowing-pics" src="./assets/frame-2.png" alt="" />
+					</div>
+					<div class="flowing-pic-wrapper pic3">
+						<img class="flowing-pics" src="./assets/frame-3.png" alt="" />
+					</div>
+					<div class="flowing-pic-wrapper pic4">
+						<img class="flowing-pics" src="./assets/frame-4.png" alt="" />
+					</div>
 				</div>
 				<div class="flowing-pics-slide2">
-					<img class="flowing-pics pic5" src="./assets/frame-2.png" alt="" />
-					<img class="flowing-pics pic6" src="./assets/frame-3.png" alt="" />
-					<img class="flowing-pics pic7" src="./assets/frame-1.png" alt="" />
+					<div class="flowing-pic-wrapper pic5">
+						<img class="flowing-pics" src="./assets/frame-2.png" alt="" />
+					</div>
+					<div class="flowing-pic-wrapper pic6">
+						<img class="flowing-pics" src="./assets/frame-3.png" alt="" />
+					</div>
+					<div class="flowing-pic-wrapper pic7">
+						<img class="flowing-pics" src="./assets/frame-1.png" alt="" />
+					</div>
 				</div>
 				<!-- </div> -->
 			</section>

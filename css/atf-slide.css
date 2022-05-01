@@ -1,19 +1,20 @@
 body {
-  max-width: 100vw;
+	max-width: 100vw;
 }
 
-.flowing-pics-slide, .flowing-pics-slide2 {
+.flowing-pics-slide,
+.flowing-pics-slide2 {
 	min-width: 100vw;
 	min-height: 97vh;
 	position: absolute;
-  top: 0;
+	top: 0;
 	z-index: -1;
-  animation: flow-left 30s linear infinite;
+	animation: flow-left 30s linear infinite;
 }
 
 .flowing-pics-slide2 {
-  animation-delay: 15s;
-  animation-fill-mode: backwards;
+	animation-delay: 15s;
+	animation-fill-mode: backwards;
 }
 
 @keyframes flow-left {
@@ -25,12 +26,63 @@ body {
 	}
 }
 
-.flowing-pics {
+.flowing-pic-wrapper {
 	position: absolute;
+	display: flex;
+	overflow: hidden;
+	outline: 5px solid var(--light-bg);
+	outline-offset: -2px;
 }
 
-.flowing-pics:hover {
-	/* cursor: crosshair; */
+.flowing-pic-wrapper::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: var(--light-bg);
+	/* z-index: 1; */
+	animation: flowing-pic-reveal 0.7s ease-in-out forwards;
+}
+
+@keyframes flowing-pic-reveal {
+	from {
+		height: 100%;
+	}
+	to {
+		height: 0;
+	}
+}
+
+.flowing-pics {
+	/* z-index: 0; */
+	animation: flowing-pic-zoom-out 0.6s linear both;
+}
+
+.pic1 .flowing-pics,
+.pic1::after {
+	animation-delay: 7s;
+}
+.pic2 .flowing-pics,
+.pic2::after {
+	animation-delay: 7.3s;
+}
+.pic3 .flowing-pics,
+.pic3::after {
+	animation-delay: 7.6s;
+}
+.pic4 .flowing-pics,
+.pic4::after {
+	animation-delay: 7.9s;
+}
+
+@keyframes flowing-pic-zoom-out {
+	0% {
+		transform: scale(1.4);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 .pic1 {
