@@ -22,13 +22,17 @@ main {
 }
 
 .rect-top {
-	border-bottom: 1px solid var(--balsa-blue);
-	background-color: var(--light-bg);
+	border-bottom: 1px solid var(--light-bg);
+	/* background-color: var(--light-bg); */
+	background-color: black;
 	top: 0;
 }
 
 .rect-bottom {
-	background-color: var(--balsa-blue);
+	/* background-color: var(--balsa-blue); */
+	/* background-color: var(--light-bg); */
+	background-color: black;
+	border-top: 1px solid var(--light-bg);
 	bottom: 0;
 }
 
@@ -53,7 +57,7 @@ main {
 	}
 }
 
-.loader-circle {
+/* .loader-circle {
 	width: 250px;
 	height: 250px;
 	background-color: var(--balsa-blue);
@@ -76,7 +80,7 @@ main {
 	top: -21%;
 	left: -21%;
 	animation: water-fill 5s ease 2s infinite forwards;
-}
+}*/
 
 @keyframes circle-opacity {
 	0% {
@@ -90,23 +94,24 @@ main {
 	}
 }
 
-@keyframes water-fill {
+/* @keyframes water-fill {
 	from {
 		transform: translateY(0) rotate(0);
 	}
 	to {
 		transform: translateY(-85%) rotate(540deg);
 	}
-}
+} */
 
-/* svg {
+svg {
 	z-index: 2;
 	position: relative;
 	animation: circle-opacity 1.5s ease 6s forwards;
 }
 
 #bowl {
-	outline: 2px double var(--balsa-blue);
+	/* outline: 2px double var(--balsa-blue); */
+	outline: 2px double var(--light-bg);
 	outline-offset: -1px;
 	border-radius: 50%;
 }
@@ -135,4 +140,4 @@ main {
 	100% {
 		transform: translateY(-70px);
 	}
-} */
+}
