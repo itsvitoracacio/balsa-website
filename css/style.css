@@ -5,67 +5,49 @@
 :root {
 	--balsa-blue: #001aa1;
 	--light-bg: #fcfaf7;
+	--big-heading-size: clamp(24rem, 60vw, 31rem);
+	--low-op-blue: #4256b7;
 }
 
 body {
 	background-color: var(--light-bg);
-}
-
-header {
-	display: flex;
-	justify-content: space-between;
-	padding: 2rem;
-	width: 100vw;
-	position: absolute;
-	/* z-index: 1; */
+	position: relative;
 }
 
 h1,
 span {
-	font-family: sans-serif;
-	font-weight: lighter;
-	color: var(--balsa-blue);
+	/* font-family: sans-serif; */
+	/* font-weight: lighter; */
+	/* color: var(--balsa-blue); */
 }
 
-.logo {
-	max-height: 50px;
-	z-index: 1;
-	/* box-sizing: content-box;
-  padding: 2rem;
-  border-right: 2px solid #001aa1;
-  border-bottom: 2px solid #001aa1;
-  background: #fcfaf7;
-  z-index: 1; */
-}
 
-.menu-toggle {
-	font-size: 1.1rem;
-	z-index: 1;
-	height: 1.1rem;
-	cursor: pointer;
-	/* margin: 2rem; */
-}
 
 #atf {
-	position: relative;
-	overflow-x: hidden;
-}
-
-.heading-container {
-	/* position: absolute; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 97vh;
-	min-width: 100vw;
+	max-width: 100vw;
+	min-height: 100vh;
 }
 
-h1 {
+.heading-container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+.big-heading,
+.alt-big-heading {
 	text-align: center;
-	/* position: fixed; */
-	width: 55%;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: Ligconsolata, sans-serif;
+	width: var(--big-heading-size);
 	margin: 0;
-	margin-top: -3rem;
-	/* z-index: 1; */
 }
 
+.big-heading {
+	color: var(--balsa-blue);
+}

@@ -1,0 +1,41 @@
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 2rem;
+	padding-bottom: 1.5rem;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+}
+
+.header-top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	max-height: 50px;
+	z-index: 1;
+}
+
+.menu-toggle,
+.tagline {
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+.menu-toggle {
+	font-size: 1.1rem;
+	height: 1.1rem;
+	cursor: pointer;
+	color: var(--balsa-blue);
+}
+
+.tagline {
+	color: var(--low-op-blue);
+	font-size: 0.9rem;
+	display: inline-block;
+	width: 10rem;
+}
