@@ -5,16 +5,15 @@ footer {
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	/* width: 50vw; */
-	padding: 1.5rem 2rem;
-	/* z-index: -1; */
+	padding-right: var(--hf-padding-horz);
+	padding-bottom: var(--hf-padding-vert);
 }
 
 .email {
 	font-family: sans-serif;
 	font-weight: lighter;
 	text-decoration: none;
-	/* display: block; */
-	font-size: .9rem;
+	text-align: right;
+	font-size: var(--smaller-font);
 	color: var(--low-op-blue);
 }

@@ -1,0 +1,46 @@
+body {
+	max-width: 100vw;
+}
+
+#atf {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100vw;
+	min-height: 100vh;
+}
+
+.heading-container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+.big-heading,
+.alt-big-heading {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: clamp(1rem, 4.5vw, 1.5rem);
+	font-weight: bold;
+	font-family: Ligconsolata, sans-serif;
+	width: clamp(22rem, 68vw, 31rem);
+	margin: 0;
+}
+
+.big-heading {
+	color: var(--balsa-blue);
+}
+
+.alt-big-heading {
+	color: var(--light-bg);
+	position: absolute;
+}
+
+.flowing-pic-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	width: clamp(12.5rem, 53vw, 14.56rem);
+}

@@ -1,22 +1,3 @@
-body {
-	max-width: 100vw;
-}
-
-.flowing-pic-wrapper {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	height: 44.3vh;
-	width: 32vh;
-}
-
-.alt-big-heading {
-	color: var(--light-bg);
-	position: absolute;
-}
-
 .flowing-pic-wrapper::after {
 	content: ;
 	position: absolute;

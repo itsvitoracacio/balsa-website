@@ -2,8 +2,10 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 2rem;
-	padding-bottom: 1.5rem;
+	padding-top: var(--hf-padding-vert);
+	padding-right: var(--hf-padding-horz);
+	padding-bottom: var(--hf-padding-vert);
+	padding-left: var(--hf-padding-horz);
 	width: 100vw;
 	height: 100vh;
 	position: absolute;
@@ -35,7 +37,7 @@ header {
 
 .tagline {
 	color: var(--low-op-blue);
-	font-size: 0.9rem;
+	font-size: var(--smaller-font);
 	display: inline-block;
 	width: 10rem;
 }
