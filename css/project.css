@@ -1,0 +1,26 @@
+#project-atf {
+  height: 100vh;
+}
+
+.project .heading-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.project .big-heading {
+  margin-bottom: 2rem;
+}
+
+.main-project-pic-wrapper {
+  width: 100vw;
+  max-height: 50vh;
+  overflow-y: hidden;
+}
+
+.main-project-pic {
+  width: 100vw;
+  transform: translateY(-39.05%);
+  /* max-height: 50vh; */
+}

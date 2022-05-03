@@ -12,6 +12,8 @@
 }
 
 body {
-	background-color: var(--light-bg);
+	/* background-color: var(--light-bg); */
 	position: relative;
+	background: url(../assets/bg.jpeg) repeat 50%/400px 200px;
+	/* background-color: black; */
 }

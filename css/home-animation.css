@@ -1,4 +1,4 @@
-.flowing-pic-wrapper::after {
+.main-proj-thumb-wrapper::after {
 	content: ;
 	position: absolute;
 	width: 100%;
@@ -17,7 +17,7 @@
 	}
 }
 
-.flowing-pic {
+.main-proj-thumb {
 	width: 100%;
 	/* animation: flowing-pic-zoom-out 0.6s linear both; */
 }

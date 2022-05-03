@@ -6,7 +6,7 @@ header {
 	padding-right: var(--hf-padding-horz);
 	padding-bottom: var(--hf-padding-vert);
 	padding-left: var(--hf-padding-horz);
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	position: absolute;
 }
