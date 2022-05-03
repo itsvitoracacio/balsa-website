@@ -3,17 +3,28 @@
 }
 
 :root {
+	/* colors */
 	--balsa-blue: #001aa1;
 	--light-bg: #fcfaf7;
+	--light-blue: rgba(0, 21, 160, 0.6);
+
+	/* paddings */
 	--hf-padding-vert: clamp(1rem, 4vw, 1.5rem);
 	--hf-padding-horz: clamp(1.5rem, 6vw, 2rem);
-	--smaller-font: clamp(0.7rem, 3.1vw, .9rem);
-	--low-op-blue: #4256b7;
+
+	/* font sizes */
+	--smaller-font: clamp(0.7rem, 3.1vw, 0.9rem);
 }
 
 body {
-	/* background-color: var(--light-bg); */
+	background-color: var(--light-bg);
 	position: relative;
-	background: url(../assets/bg.jpeg) repeat 50%/400px 200px;
+	/* background: url(../assets/bg.jpeg) repeat 50%/400px 200px; */
 	/* background-color: black; */
+}
+
+a {
+	color: var(--balsa-blue);
+	font-family: sans-serif;
+	text-decoration: none;
 }

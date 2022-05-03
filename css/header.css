@@ -36,7 +36,7 @@ header {
 }
 
 .tagline {
-	color: var(--low-op-blue);
+	color: var(--light-blue);
 	font-size: var(--smaller-font);
 	display: inline-block;
 	width: 10rem;
