@@ -1,0 +1,36 @@
+.menu-toggle {
+  position: relative;
+}
+
+.menu-toggle:hover::before {
+	transform: scale(1);
+}
+
+.menu-toggle:hover::after {
+	opacity: 1;
+}
+
+.menu-toggle::before {
+	content: '';
+	height: 5rem;
+	width: 5rem;
+	background-color: var(--balsa-blue);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: -170%;
+	left: -41%;
+	transform: scale(0.0001);
+	transition: all 0.3s;
+}
+
+.menu-toggle::after {
+	content: 'Menu';
+	color: var(--light-bg);
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	transition: all 0.5s 0.1s;
+}
