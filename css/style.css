@@ -18,6 +18,9 @@
 
 body {
 	background-color: var(--light-bg);
+	/* background-color: #adadad; */
+	color: var(--balsa-blue);
+	font-family: Inter, sans-serif;
 	position: relative;
 	/* background: url(../assets/bg.jpeg) repeat 50%/400px 200px; */
 	/* background-color: black; */
@@ -25,6 +28,5 @@ body {
 
 a {
 	color: var(--balsa-blue);
-	font-family: sans-serif;
 	text-decoration: none;
 }

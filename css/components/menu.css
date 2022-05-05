@@ -1,0 +1,87 @@
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--balsa-blue);
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: var(--hf-padding-vert);
+	padding-right: var(--hf-padding-horz);
+	padding-bottom: var(--hf-padding-vert);
+	padding-left: var(--hf-padding-horz);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.outside-toggle:hover ~ .menu {
+  color: var(--light-bg);
+}
+
+.menu {
+  clip-path: circle(.01rem at calc(100% - 3.38rem) 3.24rem);
+  color: var(--balsa-blue);
+  transition: clip-path 0.6s ease-out;
+}
+
+#menu-toggle:checked ~ .menu {
+  clip-path: circle(200% at calc(100% - 3.38rem) 3.24rem);
+  background-color: var(--balsa-blue);
+}
+
+.menu .menu-toggle {
+	color: var(--light-bg);
+	align-self: flex-end;
+	position: absolute;
+  top: 2.625rem;
+}
+
+.menu ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+nav a {
+	color: var(--light-bg);
+	font-size: 3rem;
+	/* font-weight: lighter; */
+}
+
+nav li {
+	margin: 10px 0;
+}
+
+.menu-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: var(--smaller-font);
+}
+
+.menu-footer,
+.menu-footer .tagline,
+.menu-footer a {
+	font-weight: lighter;
+	color: var(--light-bg);
+	letter-spacing: 0.25px;
+}
+
+.menu-footer li {
+	line-height: 1.25rem;
+}
+
+.brand,
+.address {
+	display: flex;
+	flex-direction: column;
+}
+
+.brand {
+	row-gap: 1.5rem;
+}
