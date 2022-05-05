@@ -35,6 +35,7 @@ body {
 .alt-big-heading {
 	color: var(--light-bg);
 	position: absolute;
+	z-index: 1;
 }
 
 .main-proj-thumb-wrapper {
@@ -48,7 +49,7 @@ body {
 
 /* HOVER ANIMATION OPTION 1 */
 /* .flowing-pic-wrapper {
-	transition: .5s;
+	transition: width .5s;
 }
 .flowing-pic-wrapper:hover {
 	width: clamp(13rem, 55vw, 15rem);

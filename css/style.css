@@ -18,7 +18,6 @@
 
 body {
 	background-color: var(--light-bg);
-	/* background-color: #adadad; */
 	color: var(--balsa-blue);
 	font-family: Inter, sans-serif;
 	position: relative;

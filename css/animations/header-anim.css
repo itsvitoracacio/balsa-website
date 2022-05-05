@@ -1,3 +1,4 @@
+/* HOVER ON MENU TOGGLE FOR THE CIRCLE TO APPEAR */
 .menu-toggle {
   position: relative;
 }
@@ -25,20 +26,20 @@
 	transition: all 0.3s;
 }
 
-.outside-toggle::before {
-	background-color: var(--balsa-blue);
-}
-
-.inside-toggle::before {
-	background-color: var(--light-bg);
-}
-
 .menu-toggle::after {
 	content: 'Menu';
 	position: absolute;
 	left: 0;
 	opacity: 0;
 	transition: all 0.5s 0.1s;
+}
+
+.outside-toggle::before {
+	background-color: var(--balsa-blue);
+}
+
+.inside-toggle::before {
+	background-color: var(--light-bg);
 }
 
 .outside-toggle::after {
@@ -71,3 +72,19 @@
 .menu .menu-toggle {
 	display: none;
 } */
+
+/* CLICK TO OPEN MENU ANIMATION */
+.outside-toggle:hover ~ .menu {
+	color: var(--light-bg);
+}
+
+.menu {
+	clip-path: circle(0.01rem at calc(100% - 3.38rem) 3.24rem);
+	color: var(--balsa-blue);
+	transition: clip-path 0.6s ease-out;
+}
+
+#menu-toggle:checked ~ .menu {
+	clip-path: circle(200% at calc(100% - 3.38rem) 3.24rem);
+	background-color: var(--balsa-blue);
+}

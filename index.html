@@ -56,13 +56,15 @@
 		<!-- </div> -->
 		<header>
 			<div class="header-top">
-				<a href="#"
+				<a href="/index.html"
 					><img src="./assets/logo-balsa.png" alt="logo" class="logo"
 				/></a>
-				<input type="checkbox" name="menu-toggle" id="menu-toggle">
+				<input type="checkbox" name="menu-toggle" id="menu-toggle" />
 				<label for="menu-toggle" class="outside-toggle menu-toggle">Menu</label>
 				<div class="menu">
-					<label for="menu-toggle" class="inside-toggle menu-toggle">Menu</label>
+					<label for="menu-toggle" class="inside-toggle menu-toggle"
+						>Menu</label
+					>
 					<nav>
 						<ul>
 							<li><a href="#">Home</a></li>
@@ -107,9 +109,8 @@
 					>Arquitetura e design de interiores em BH e SP</span
 				>
 			</div>
-			
 		</header>
-		<main class="home">
+		<main id="swup" class="home">
 			<section id="home-atf">
 				<div class="heading-container">
 					<h2 class="big-heading transition-fade-heading">
@@ -124,11 +125,11 @@
 					<span class="current-proj-number">01</span>
 					<span class="total-proj-count">04</span>
 				</div>
-				<div class="main-proj-thumb-wrapper pic1">
+				<div class="main-proj-thumb-wrapper pic1 proj-thumb-wrapper-anim">
 					<h2 class="alt-big-heading transition-fade-heading">
 						Lorem ipsum dolor sit amet veniam, consectetur adipising elit
 					</h2>
-					<a href="/project.html">
+					<a class="main-proj-thumb-link" href="/project.html">
 						<img
 							class="main-proj-thumb"
 							src="./assets/compressed-image.jpeg"

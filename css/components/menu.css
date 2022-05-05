@@ -16,29 +16,14 @@
 }
 
 #menu-toggle {
-  display: none;
-}
-
-.outside-toggle:hover ~ .menu {
-  color: var(--light-bg);
-}
-
-.menu {
-  clip-path: circle(.01rem at calc(100% - 3.38rem) 3.24rem);
-  color: var(--balsa-blue);
-  transition: clip-path 0.6s ease-out;
-}
-
-#menu-toggle:checked ~ .menu {
-  clip-path: circle(200% at calc(100% - 3.38rem) 3.24rem);
-  background-color: var(--balsa-blue);
+	display: none;
 }
 
 .menu .menu-toggle {
 	color: var(--light-bg);
 	align-self: flex-end;
 	position: absolute;
-  top: 2.625rem;
+	top: 2.625rem;
 }
 
 .menu ul {
@@ -47,14 +32,13 @@
 	margin: 0;
 }
 
+nav li {
+	margin: 10px 0;
+}
+
 nav a {
 	color: var(--light-bg);
 	font-size: 3rem;
-	/* font-weight: lighter; */
-}
-
-nav li {
-	margin: 10px 0;
 }
 
 .menu-footer {

@@ -16,7 +16,11 @@ html.is-leaving .transition-proj-thumb-anim {
 	opacity: .99;
 }
 
-.proj-thumb-anim {
+.main-proj-thumb-link {
+  width: 100%;
+}
+
+.proj-thumb-wrapper-anim {
   animation-name: slide-and-widen, proj-thumb-height;
   animation-duration: 1.4s;
   animation-timing-function: cubic-bezier(0.6, 0.01, -0.05, 0.9);
@@ -44,10 +48,17 @@ html.is-leaving .transition-proj-thumb-anim {
 
 .main-proj-thumb {
   /* animation: translateY 1.2s ease-out 1.2s forwards; */
+  animation: widen 1.4s forwards;
 }
 
 @keyframes translateY {
   100% {
     transform: translateY(40%);
+  }
+}
+
+@keyframes widen {
+  100% {
+    width: 100%;
   }
 }
