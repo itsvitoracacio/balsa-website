@@ -1,3 +1,6 @@
+
+
+const swup = new Swup()
 /* const cursor = document.querySelector('.inner-cursor')
 const cursorWrapper = document.querySelector('.outer-cursor')
 document.addEventListener('mousemove', e => {
@@ -16,4 +19,3 @@ document.addEventListener('mouseup', _ => {
 }) */
 // need to make the outer circle grow back smoothly
 // need to add a delay to the outer circle when following the inner circle
-const swup = new Swup()
