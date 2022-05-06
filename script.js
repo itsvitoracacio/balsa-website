@@ -17,9 +17,3 @@ document.addEventListener('mouseup', _ => {
 // need to make the outer circle grow back smoothly
 // need to add a delay to the outer circle when following the inner circle
 const swup = new Swup()
-
-document.querySelector('.menu-toggle').addEventListener('click', _ => {
-	document
-		.querySelector('.main-proj-thumb-wrapper')
-		.classList.add('proj-thumb-anim')
-})

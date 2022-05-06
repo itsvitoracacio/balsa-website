@@ -7,58 +7,13 @@ html.is-leaving .transition-fade-heading {
 	opacity: 0;
 }
 
-.transition-proj-thumb-anim {
-	transition-duration: 1.6s;
-	opacity: 1;
+.transition-proj-thumb-wrapper {
+	transition-duration: 1.4s;
+	transition-timing-function: cubic-bezier(0.6, 0.01, -0.05, 0.9);
+	transform: translateY(0);
 }
 
-html.is-leaving .transition-proj-thumb-anim {
-	opacity: .99;
-}
-
-.main-proj-thumb-link {
-  width: 100%;
-}
-
-.proj-thumb-wrapper-anim {
-  animation-name: slide-and-widen, proj-thumb-height;
-  animation-duration: 1.4s;
-  animation-timing-function: cubic-bezier(0.6, 0.01, -0.05, 0.9);
-  animation-delay: 0, 0.2s;
-  animation-fill-mode: forwards;
-  overflow-y: hidden;
-  max-height: 50vh;
-}
-
-@keyframes slide-and-widen {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(50%);
-    width: 100vw;
-  }
-}
-
-@keyframes proj-thumb-height {
-  to {
-    max-height: 50vh;
-  }
-}
-
-.main-proj-thumb {
-  /* animation: translateY 1.2s ease-out 1.2s forwards; */
-  animation: widen 1.4s forwards;
-}
-
-@keyframes translateY {
-  100% {
-    transform: translateY(40%);
-  }
-}
-
-@keyframes widen {
-  100% {
-    width: 100%;
-  }
+html.is-leaving .transition-proj-thumb-wrapper {
+	transform: translateY(50%);
+	width: 100vw;
 }

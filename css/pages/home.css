@@ -38,13 +38,18 @@ body {
 	z-index: 1;
 }
 
-.main-proj-thumb-wrapper {
+.proj-thumb-wrapper {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 	width: clamp(12.5rem, 53vw, 14.56rem);
+	max-height: 50vh;
+}
+
+.proj-thumb-link {
+	width: 100%;
 }
 
 /* HOVER ANIMATION OPTION 1 */
