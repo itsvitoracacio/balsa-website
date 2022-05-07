@@ -24,43 +24,28 @@ const scene = new Scene()
 scene.background = new Color('skyblue')
 
 // Create a camera
-const fov = 12 // AKA Field of View
+const fov = 35 // AKA Field of View
 const aspect = container.clientWidth / container.clientHeight
 const near = 0.1 // the near clipping plane
 const far = 100 // the far clipping plane
 const camera = new PerspectiveCamera(fov, aspect, near, far)
 // every object is initially created at ( 0, 0, 0 )
 // move the camera back so we can view the scene
-camera.position.set(0, 0, 5)
+camera.position.set(0, 0, 10)
 
 // Create a cube
 // create a geometry
-const geometry = new PlaneBufferGeometry(0.4, 0.6, 16, 16)
+const length = 2
+const width = 2
+const depth = 2
+const geometry = new BoxBufferGeometry(length, width, depth)
 // create a default (white) Basic material
 const material = new MeshBasicMaterial()
-const waveShaderMaterial = new ShaderMaterial(
-	// Uniforms
-	{
-		uniforms: {
-			time: { value: 0 },
-			color: 'hotpink',
-			texture: new TextureLoader().load('https://images.unsplash.com/photo-1604011092346-0b4346ed714e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80'), // may not be correct
-		}
-	},
-	// vertexShader
-	glsl`
-		// insert here
-	`,
-	// fragmentShader
-	glsl`
-		// insert here
-	`)
-
 // create a Mesh containing the geometry and material
-const flag = new Mesh(geometry, waveShaderMaterial)
+const cube = new Mesh(geometry, material)
 
 // add the mesh to the scene
-scene.add(flag)
+scene.add(cube)
 
 // Create the renderer
 const renderer = new WebGLRenderer()
