@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	background-color: var(--balsa-blue);
 	z-index: 1;
@@ -15,21 +15,17 @@
 	padding-left: var(--hf-padding-horz);
 }
 
+/* This is the checkbox */
 #menu-toggle {
 	display: none;
 }
 
+/* This is the label associated with the checkbox */
 .menu .menu-toggle {
 	color: var(--light-bg);
 	align-self: flex-end;
 	position: absolute;
 	top: 2.625rem;
-}
-
-.menu ul {
-	list-style-type: none;
-	padding-left: 0;
-	margin: 0;
 }
 
 nav li {
@@ -41,31 +37,8 @@ nav a {
 	font-size: 3rem;
 }
 
-.menu-footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	font-size: var(--smaller-font);
-}
-
 .menu-footer,
 .menu-footer .tagline,
 .menu-footer a {
-	font-weight: lighter;
 	color: var(--light-bg);
-	letter-spacing: 0.25px;
-}
-
-.menu-footer li {
-	line-height: 1.25rem;
-}
-
-.brand,
-.address {
-	display: flex;
-	flex-direction: column;
-}
-
-.brand {
-	row-gap: 1.5rem;
 }

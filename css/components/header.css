@@ -7,8 +7,11 @@ header {
 	padding-bottom: var(--hf-padding-vert);
 	padding-left: var(--hf-padding-horz);
 	width: 100%;
+	position: fixed;
+}
+
+.homepage header {
 	height: 100vh;
-	position: absolute;
 }
 
 .header-top {
@@ -24,22 +27,16 @@ header {
 	z-index: 1;
 }
 
-.menu-toggle,
-.tagline {
-	font-family: sans-serif;
-	font-weight: lighter;
+body:not(.homepage) .header-bottom {
+	display: none;
 }
 
 .menu-toggle {
 	font-size: 1.1rem;
 	height: 1.1rem;
 	cursor: pointer;
-	color: var(--balsa-blue);
 }
 
-.tagline {
+.header-bottom .tagline {
 	color: var(--light-blue);
-	font-size: var(--smaller-font);
-	display: inline-block;
-	width: 10rem;
 }

@@ -1,19 +1,41 @@
-footer {
+.homepage footer {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	padding-right: var(--hf-padding-horz);
-	padding-bottom: var(--hf-padding-vert);
+	padding-left: 0;
+	padding-top: 0;
 }
 
-.email {
-	font-family: sans-serif;
-	font-weight: lighter;
-	text-decoration: none;
-	text-align: right;
-	font-size: var(--smaller-font);
+.homepage footer a {
 	color: var(--light-blue);
+}
+
+footer {
+	padding-top: var(--hf-padding-vert);
+	padding-right: var(--hf-padding-horz);
+	padding-bottom: var(--hf-padding-vert);
+	padding-left: var(--hf-padding-horz);
+}
+
+footer,
+.menu-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: var(--smaller-font);
+}
+
+footer li,
+.menu-footer li {
+	line-height: 1.25rem;
+}
+
+.brand,
+.address {
+	display: flex;
+	flex-direction: column;
+}
+
+.brand {
+	row-gap: 1.5rem;
 }

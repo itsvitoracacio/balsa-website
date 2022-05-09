@@ -117,16 +117,6 @@ body {
 
 
 .home .bottom-button {
-	font-family: Inter, sans-serif;
 	position: absolute;
 	bottom: var(--hf-padding-vert);
-	text-transform: uppercase;
-	font-weight: 400;
-	border-bottom: 1.5px solid var(--balsa-blue);
-	transition: all .2s;
-}
-
-.home .bottom-button:hover {
-	margin-bottom: -2px;
-	padding-bottom: 2px;
 }

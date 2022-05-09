@@ -7,10 +7,14 @@
 	--balsa-blue: #001aa1;
 	--light-bg: #fcfaf7;
 	--light-blue: rgba(0, 21, 160, 0.6);
+	--lighter-blue: rgba(0, 21, 160, 0.3);
 
 	/* paddings */
 	--hf-padding-vert: clamp(1rem, 4vw, 1.5rem);
 	--hf-padding-horz: clamp(1.5rem, 6vw, 2rem);
+
+	/* font families */
+	--font-inter: Inter, sans-serif;
 
 	/* font sizes */
 	--smaller-font: clamp(0.7rem, 3.1vw, 0.9rem);
@@ -19,13 +23,61 @@
 body {
 	background-color: var(--light-bg);
 	color: var(--balsa-blue);
-	font-family: Inter, sans-serif;
+	font-family: var(--font-inter);
 	position: relative;
 	/* background: url(../assets/bg.jpeg) repeat 50%/400px 200px; */
 	/* background-color: black; */
 }
 
+main:not(.home) {
+	padding-bottom: 5rem;
+}
+
+h1 {
+	font-size: clamp(3rem, 10vw, 4rem); /* come back here */
+	font-weight: 400;
+}
+
+h2 {
+	font-size: clamp(2rem, 10vw, 2.75rem); /* come back here */
+	font-weight: 400;
+	max-width: 50%;
+	margin: 0;
+}
+
 a {
 	color: var(--balsa-blue);
 	text-decoration: none;
+	font-weight: 300;
+}
+
+.link-button {
+	text-transform: uppercase;
+	font-weight: 400;
+	border-bottom: 1.5px solid var(--balsa-blue);
+	transition: all .2s;
+	display: inline-block;
+	width: fit-content;
+}
+
+.link-button:hover {
+	margin-bottom: -2px;
+	padding-bottom: 2px;
+}
+
+label,
+span {
+	font-weight: 300;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.tagline {
+	font-size: var(--smaller-font);
+	display: inline-block;
+	width: 11rem;
 }
