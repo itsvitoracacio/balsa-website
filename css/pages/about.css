@@ -26,6 +26,7 @@
 .about-team-text {
 	display: flex;
 	justify-content: space-between;
+	/* align-items: flex-end; */
 }
 
 .about-studio-text div,
@@ -85,6 +86,7 @@
 	top: -9rem;
 	left: -2rem;
 	font-family: 'BIZ UDPGothic', sans-serif;
+	font-family: var(--font-proj-number);
 	font-size: 10rem;
 	transform: rotate(180deg);
 	color: var(--lighter-blue);
@@ -98,7 +100,7 @@
 }
 
 .client-name {
-	font-weight: 400;
+	font-weight: var(--weight-reg);
 }
 
 .client-company {
@@ -110,7 +112,6 @@
 .abt--expertise {
 	flex-direction: row;
 	align-items: baseline;
-	/* height: 100vh; */
 }
 
 .abt--expertise ul {
@@ -132,9 +133,6 @@
 }
 
 .abt--expertise h3 {
-	text-transform: uppercase;
-	font-weight: 300;
-	font-size: 1.5rem;
 	padding: 1.25rem;
 	margin: 0;
 	cursor: pointer;
@@ -175,7 +173,8 @@
 }
 
 .abt--client-logos h2 {
-	max-width: 100%;
+	max-width: 60%;
+	text-align: center;
 }
 
 .abt--client-logos ul {
@@ -220,6 +219,7 @@
 
 .about-partner figcaption {
 	font-size: var(--smaller-font);
+	font-weight: var(--weight-reg);
 	width: 8rem;
 }
 
@@ -239,7 +239,6 @@
 
 .about-paulo div {
 	text-align: right;
-	padding-top: 5rem;
 }
 
 .about-partner-text {
@@ -263,6 +262,10 @@
 /* This rule is separated from the block above because of specifity overwriting */
 section.abt--cta-section {
 	padding: 2.5rem 2.35rem;
+}
+
+.abt--cta-section h2 {
+	max-width: 75%;
 }
 
 .abt--cta-section .link-button {

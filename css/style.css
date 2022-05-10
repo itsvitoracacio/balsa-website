@@ -5,6 +5,7 @@
 :root {
 	/* colors */
 	--balsa-blue: #001aa1;
+	/* --balsa-blue: #fcfaf7; */
 	--light-bg: #fcfaf7;
 	--light-blue: rgba(0, 21, 160, 0.6);
 	--lighter-blue: rgba(0, 21, 160, 0.3);
@@ -14,48 +15,70 @@
 	--hf-padding-horz: clamp(1.5rem, 6vw, 2rem);
 
 	/* font families */
-	--font-inter: Inter, sans-serif;
+	--font-proj-number: ballinger-mono, 'Consolas', monospace;
+	--font-circe: Circe, sans-serif;
 
 	/* font sizes */
 	--smaller-font: clamp(0.7rem, 3.1vw, 0.9rem);
+
+	/* font weights */
+	--weight-reg: 400;
+	--weight-proj-number: 400;
 }
 
 body {
-	background-color: var(--light-bg);
 	color: var(--balsa-blue);
-	font-family: var(--font-inter);
+	font-family: var(--font-circe);
+	font-weight: 300;
 	position: relative;
-	/* background: url(../assets/bg.jpeg) repeat 50%/400px 200px; */
-	/* background-color: black; */
+	background-color: var(--light-bg);
+	/* background-color: #3d3d3d; */
+	/* background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png') repeat 50%/400px 200px; */
+	/* background-image: url('https://www.transparenttextures.com/patterns/black-orchid.png') repeat 50%/400px 200px; */
 }
 
 main:not(.home) {
 	padding-bottom: 5rem;
 }
 
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+
+h1,
+h2 {
+	font-weight: 700;
+}
+
 h1 {
-	font-size: clamp(3rem, 10vw, 4rem); /* come back here */
-	font-weight: 400;
+	font-size: clamp(3rem, 10vw, 3.75rem); /* come back here */
+	max-width: 82vw;
+	margin-bottom: 1.25rem;
 }
 
 h2 {
 	font-size: clamp(2rem, 10vw, 2.75rem); /* come back here */
-	font-weight: 400;
 	max-width: 50%;
 	margin: 0;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
 }
 
 a {
 	color: var(--balsa-blue);
 	text-decoration: none;
-	font-weight: 300;
 }
 
 .link-button {
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: var(--weight-reg);
 	border-bottom: 1.5px solid var(--balsa-blue);
-	transition: all .2s;
+	transition: all 0.2s;
 	display: inline-block;
 	width: fit-content;
 }
@@ -63,11 +86,6 @@ a {
 .link-button:hover {
 	margin-bottom: -2px;
 	padding-bottom: 2px;
-}
-
-label,
-span {
-	font-weight: 300;
 }
 
 ul {

@@ -19,13 +19,10 @@ body {
 .big-heading,
 .alt-big-heading {
 	text-align: center;
-	text-transform: uppercase;
 	font-size: clamp(1rem, 4.5vw, 1.5rem);
-	font-weight: 600;
-	font-family: Inter, sans-serif;
-	/* font-family: Ligconsolata, sans-serif; */
 	width: clamp(22rem, 68vw, 31rem);
 	margin: 0;
+	max-width: unset;
 }
 
 .big-heading {
@@ -64,7 +61,7 @@ body {
 .main-proj-thumb {
 	transition: 0.6s;
 	transition-timing-function: cubic-bezier(0.43, 0.13, 0.23, 0.96);
-	/* z-index: -1; */
+	z-index: -2;
 }
 
 .main-proj-thumb:hover {
@@ -76,12 +73,13 @@ body {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	font-family: Inter, sans-serif;
 }
 
 .home .project-details {
 	left: 0;
 	margin-left: var(--hf-padding-horz);
+	text-transform: uppercase;
+	font-weight: var(--weight-reg);
 }
 
 .home .proj-name,
@@ -91,7 +89,7 @@ body {
 
 .home .proj-category,
 .home .total-proj-count {
-	color: var(--light-blue);
+	color: var(--lighter-blue);
 }
 
 .home .proj-name {
@@ -100,21 +98,21 @@ body {
 
 .home .proj-category {
 	color: var(--light-blue);
-	font-size: .8rem;
-	text-transform: uppercase;
+	font-size: 0.8rem;
+	/* text-transform: uppercase; */
 }
 
 .proj-count {
 	position: absolute;
 	right: var(--hf-padding-horz);
-	font-size: 3rem;
+	font-size: 4rem;
+	font-family: var(--font-proj-number);
+	font-weight: var(--weight-proj-number);
 }
 
 .current-proj-number {
 	border-bottom: 3px solid var(--balsa-blue);
-	letter-spacing: 7px;
 }
-
 
 .home .bottom-button {
 	position: absolute;
