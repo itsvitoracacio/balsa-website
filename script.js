@@ -1,4 +1,19 @@
 const swup = new Swup()
+
+document
+	.querySelector('.outside-toggle')
+	.addEventListener('click', changeHeaderZIndex)
+document
+	.querySelector('.inside-toggle')
+	.addEventListener('click', changeHeaderZIndex)
+
+function changeHeaderZIndex() {
+	const header = document.querySelector('header')
+	const menuCheckbox = document.querySelector('#menu-toggle')
+	if (menuCheckbox.checked) setTimeout(() => (header.style.zIndex = '0'), 750)
+	else header.style.zIndex = '10'
+}
+
 /* const cursor = document.querySelector('.inner-cursor')
 const cursorWrapper = document.querySelector('.outer-cursor')
 document.addEventListener('mousemove', e => {
