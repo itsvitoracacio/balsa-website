@@ -180,8 +180,21 @@ body {
 	font-weight: var(--weight-proj-number);
 }
 
-.current-proj-number {
+.proj-number {
 	border-bottom: 3px solid var(--balsa-blue);
+	overflow: hidden;
+}
+
+.changing-number {
+	position: relative;
+}
+
+.cur-proj-number, .hidden-proj-number {
+	position: absolute;
+}
+
+.hidden-proj-number {
+	transform: translateY(100%);
 }
 
 .total-proj-count {

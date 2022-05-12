@@ -102,4 +102,19 @@
 	}
 }
 
-
+.rollOutProjNum {
+	animation: rollOut 1.3s ease forwards;
+}
+.rollInProjNum {
+	animation: rollIn 1.3s ease-in-out forwards;
+}
+@keyframes rollOut {
+	to {
+		transform: translateY(-100%);
+	}
+}
+@keyframes rollIn {
+	to {
+		transform: translateY(0);
+	}
+}

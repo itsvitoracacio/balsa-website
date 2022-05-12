@@ -18,7 +18,7 @@ document.addEventListener('mouseup', _ => {
 // need to make the outer circle grow back smoothly
 // need to add a delay to the outer circle when following the inner circle
 
-document.body.addEventListener('click', function () {
+document.body.addEventListener('mousewheel', function () {
 	const projDetails = document.querySelector('.project-details')
 	const projName = document.querySelector('.cur-proj-name')
 	const projCategory = document.querySelector('.cur-proj-cat')
@@ -44,6 +44,14 @@ document.body.addEventListener('click', function () {
 	// 	projDeetsBlock1.remove()
 	// 	projDeetsBlock2.remove()
 	// }, 1500)
+})
+
+document.body.addEventListener('mousewheel', function () {
+	const curProjNum = document.querySelector('.cur-proj-number')
+	const hiddenProjNum = document.querySelector('.hidden-proj-number')
+
+	curProjNum.classList.add('rollOutProjNum')
+	hiddenProjNum.classList.add('rollInProjNum')
 })
 
 document.body.addEventListener('click', function () {})
