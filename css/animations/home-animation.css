@@ -48,62 +48,51 @@
 	}
 }
 
-.hideDownText {
-	animation: hideDown 1s forwards;
-}
+
 .hideUpText {
-	animation: hideUp 1s forwards;
+	animation: hideUp 0.25s ease-out forwards;
+}
+.hideDownText {
+	animation: hideDown 0.35s ease-out forwards 0.20s;
+}
+.showUpText {
+	animation: showUp 0.4s ease-out forwards 0.5s;
+}
+.slideUpThenDownBlock {
+	animation: slideUp 0.20s forwards, thenSlideDown 0.25s forwards 0.75s;
+}
+.showDownText {
+	animation: showDown 0.5s ease-out forwards 0.8s;
 }
 
-@keyframes hideDown {
-	to {
-		transform: translateY(50%);
-		visibility: hidden;
-	}
-}
+
+
 @keyframes hideUp {
 	to {
 		transform: translateY(-50%);
 		visibility: hidden;
 	}
 }
-
-.slideDownBlock {
-	animation: slideDown 0.75s forwards;
-}
-.slideUpBlock {
-	animation: slideUp 0.75s forwards;
-}
-
 @keyframes slideUp {
-/* 	50% {
-		transform: translateY(50%);
-	} */
-	100% {
-		transform: translateY(50%);
+	to {
+		transform: translateY(30%);
 	}
 }
-@keyframes slideDown {
-/* 	50% {
-		transform: translateY(-50%)
-	} */
-	100% {
-		transform: translateY(-50%);
+@keyframes hideDown {
+	to {
+		transform: translateY(50%);
+		visibility: hidden;
 	}
 }
-
-.showUpText {
-	animation: showUp 1s forwards 1s;
-}
-
-.showDownText {
-	animation: showDown 1s forwards 1s;
-}
-
 @keyframes showUp {
 	to {
 		transform: translateY(-50%);
 		visibility: visible;
+	}
+}
+@keyframes thenSlideDown {
+	100% {
+		transform: translateY(150%)
 	}
 }
 @keyframes showDown {
@@ -112,3 +101,5 @@
 		visibility: visible;
 	}
 }
+
+

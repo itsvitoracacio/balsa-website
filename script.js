@@ -20,23 +20,23 @@ document.addEventListener('mouseup', _ => {
 
 document.body.addEventListener('click', function () {
 	const projDetails = document.querySelector('.project-details')
-	const projName = document.querySelector('.current-feat-proj-name')
-	const projCategory = document.querySelector('.current-feat-proj-cat')
+	const projName = document.querySelector('.cur-proj-name')
+	const projCategory = document.querySelector('.cur-proj-cat')
 
-	const projDeetsBlock1 = document.createElement('div')
-	const projDeetsBlock2 = document.createElement('div')
-	projDeetsBlock1.classList.add('proj-deets-block', 'block1', 'slideDownBlock')
-	projDeetsBlock2.classList.add('proj-deets-block', 'block2', 'slideUpBlock')
+	const block1 = document.createElement('div')
+	const block2 = document.createElement('div')
+	block1.classList.add('proj-deets-block', 'block1')
+	block2.classList.add('proj-deets-block', 'block2', 'slideUpThenDownBlock')
 
-	projDetails.insertBefore(projDeetsBlock1, projName)
-	projDetails.appendChild(projDeetsBlock2)
+	projDetails.insertBefore(block1, projName)
+	projDetails.appendChild(block2)
 	projName.classList.add('hideDownText')
 	projCategory.classList.add('hideUpText')
 
-	const hiddenName = document.querySelector('.hidden-feat-proj-name')
-	const hiddenCategory = document.querySelector('.hidden-feat-proj-cat')
+	const hiddenName = document.querySelector('.hidden-proj-name')
+	const hiddenCat = document.querySelector('.hidden-proj-cat')
 	hiddenName.classList.add('showUpText')
-	hiddenCategory.classList.add('showDownText')
+	hiddenCat.classList.add('showDownText')
 
 	// setTimeout(() => {
 	// 	projName.classList.remove('slideDownText')
