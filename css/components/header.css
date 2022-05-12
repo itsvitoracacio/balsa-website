@@ -8,6 +8,7 @@ header {
 	padding-left: var(--hf-padding-horz);
 	width: 100%;
 	position: fixed;
+	z-index: 10;
 }
 
 .homepage header {
