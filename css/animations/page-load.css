@@ -1,8 +1,10 @@
 :root {
 	--water-fill-duration: 4.7s;
-	--site-load-duration: 5.1s;
+	--site-load-duration: 5.2s;
 	--load-bg-color: var(--light-bg);
 	--load-line-color: var(--balsa-blue);
+	--bowl-color: var(--light-bg);
+	--fill-color: var(--light-blue);
 }
 
 .page-loader-container {
@@ -19,7 +21,7 @@
 	width: 100vw;
 	height: 1px;
 	position: absolute;
-	animation: rect-shrink 1.25s ease-out var(--site-load-duration) both;
+	animation: rect-shrink 1.25s ease var(--site-load-duration) both;
 	z-index: 10;
 	background-color: var(--load-bg-color);
 	background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png');
@@ -64,8 +66,65 @@
 	}
 }
 
+.loading-progress {
+	position: absolute;
+	z-index: 12;
+	color: var(--balsa-blue);
+	/* color: black; */
+	line-height: 3rem;
+	font-size: 3.25rem;
+	font-weight: 700;
+	display: flex;
+	flex-direction: row;
+	/* width: 100%; */
+	overflow: hidden;
+	animation: circle-opacity 0.35s ease var(--site-load-duration) forwards;
+}
+
+.load-number {
+	width: 1.75rem;
+	height: 2.5rem;
+	text-align: center;
+	vertical-align: center;
+	position: relative;
+	/* background-color: red; */
+}
+
+
+.load-tens::after,
+.load-units::after {
+	content: "0 1 2 3 4 5 6 7 8 9";
+	position: relative;
+}
+
+.load-hundreds::after {
+	content: "0 0 0 0 0 0 0 0 0 0 1";
+	position: relative;
+}
+
+.load-hundreds {
+	animation: countUp 4.85s steps(10) forwards;
+}
+
+.load-tens {
+	animation: countUp 4.85s steps(10);
+}
+
+.load-units {
+	animation: countUp 0.485s steps(10) 10;
+}
+
+@keyframes countUp {
+	from {
+		top: 0;
+	}
+	to {
+		top: -480px;
+	}
+}
+
 #bowl {
-	outline: 2px double var(--load-line-color);
+	outline: 1px double var(--load-line-color);
 	outline-offset: -1px;
 	border-radius: 50%;
 }
