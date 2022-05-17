@@ -19,6 +19,8 @@
 	--font-circe: Circe, sans-serif;
 
 	/* font sizes */
+	--h1-size: clamp(3rem, 10vw, 3.75rem);
+	--h2-size: clamp(2rem, 10vw, 2.75rem);
 	--smaller-font: clamp(0.7rem, 3.1vw, 0.9rem);
 
 	/* font weights */
@@ -53,14 +55,13 @@ h2 {
 }
 
 h1 {
-	font-size: clamp(3rem, 10vw, 3.75rem); /* come back here */
+	font-size: var(--h1-size);
 	max-width: 82vw;
 	margin-bottom: 1.25rem;
 }
 
 h2 {
-	font-size: clamp(2rem, 10vw, 2.75rem); /* come back here */
-	/* max-width: 50%; */
+	font-size: var(--h2-size);
 	margin: 0;
 }
 
@@ -95,13 +96,12 @@ ul {
 }
 
 .tagline {
-	/* font-size: var(--smaller-font); */
 	display: inline-block;
 	width: 11rem;
 }
 
 @media screen and (min-width: 768px) {
-	h2 {
+	.heading-wrapper {
 		max-width: 50%;
 	}
 	.tagline {

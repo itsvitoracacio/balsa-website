@@ -68,5 +68,3 @@ document.body.addEventListener('mousewheel', function () {
 	curProjNum.classList.add('rollOutProjNum')
 	hiddenProjNum.classList.add('rollInProjNum')
 })
-
-document.body.addEventListener('click', function () {})
