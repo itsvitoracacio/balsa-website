@@ -20,9 +20,11 @@ footer {
 footer,
 .menu-footer {
 	display: flex;
-	justify-content: space-between;
+	/* flex-direction: column; */
 	align-items: flex-end;
-	font-size: var(--smaller-font);
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 1.5rem;
 }
 
 footer li,
@@ -38,4 +40,41 @@ footer li,
 
 .brand {
 	row-gap: 1.5rem;
+}
+
+.brand,
+.legal {
+	width: 100%;
+}
+
+.legal ul {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
+	font-size: 0.75rem;
+}
+
+.legal a {
+	color: var(--light-blue);
+}
+
+@media screen and (min-width: 768px) {
+	footer,
+	.menu-footer {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		font-size: var(--smaller-font);
+	}
+	.brand,
+	.legal {
+		width: unset;
+	}
+	.legal ul {
+		display: block;
+		font-size: var(--smaller-font);
+	}
+	.legal a {
+		color: var(--balsa-blue);
+	}
 }

@@ -60,7 +60,7 @@ h1 {
 
 h2 {
 	font-size: clamp(2rem, 10vw, 2.75rem); /* come back here */
-	max-width: 50%;
+	/* max-width: 50%; */
 	margin: 0;
 }
 
@@ -95,7 +95,16 @@ ul {
 }
 
 .tagline {
-	font-size: var(--smaller-font);
+	/* font-size: var(--smaller-font); */
 	display: inline-block;
 	width: 11rem;
+}
+
+@media screen and (min-width: 768px) {
+	h2 {
+		max-width: 50%;
+	}
+	.tagline {
+		font-size: var(--smaller-font);
+	}
 }
