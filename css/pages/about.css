@@ -30,7 +30,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/* align-items: flex-end; */
+	align-items: flex-end;
 	row-gap: 3rem; /* come back here */
 }
 
@@ -199,23 +199,15 @@
 	row-gap: 7.5rem;
 }
 
-/* .about-partners-container {
+.about-partners-container {
   display: flex;
   flex-direction: column;
-} */
+	row-gap: 5rem;
+}
 
 .about-partner {
 	display: flex;
-	align-items: center;
-}
-
-.about-paulo {
-	flex-direction: row-reverse;
-}
-
-.about-partner figure,
-.about-partner-text {
-	width: 50%;
+	flex-direction: column;
 }
 
 .about-partner figure {
@@ -232,28 +224,27 @@
 
 .about-sarah figure {
 	justify-content: flex-end;
-	align-items: flex-end;
-	padding-right: 3rem;
 }
 
 .about-sarah figcaption {
 	text-align: right;
 }
 
-.about-paulo figure {
-	padding-left: 3rem;
-}
-
-.about-paulo div {
-	text-align: right;
-}
-
 .about-partner-text {
-	width: 20vw;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.about-sarah .about-partner-text {
+	align-items: flex-end;
+}
+.about-paulo .about-partner-text {
+	align-items: flex-start;
 }
 
+.about-partner-text p,
 .abt--about-team img {
-	max-width: 25.6vw;
+	max-width: 50vw;
 }
 /* END OF THE ABOUT TEAM SECTION */
 
@@ -304,5 +295,38 @@ section.abt--cta-section {
 	}
 	.abt--client-logos h2 {
 		max-width: 60%;
+	}
+	.about-partners-container {
+		row-gap: unset;
+	}
+	.about-partner {
+		flex-direction: row;
+		align-items: center;
+	}
+	.about-paulo {
+		flex-direction: row-reverse;
+	}
+	.about-partner figure {
+		width: 50%;
+	}
+	.about-partner-text {
+		width: 20vw;
+		display: block;
+	}
+	.about-sarah figure {
+		padding-right: 3rem;
+		align-items: flex-end;
+	}
+	.about-paulo figure {
+		padding-left: 3rem;
+	}
+	.about-paulo div {
+		text-align: right;
+	}
+	.abt--about-team img {
+		max-width: 25.6vw;
+	}
+	.about-partner-text p {
+		max-width: unset;
 	}
 }
