@@ -21,10 +21,17 @@
 		<header>
 			<div class="header-top">
 				<a href="/index.html"
-					><img src="./assets/logo-balsa.png" alt="logo" class="logo"
+					><img
+						class="logo header-reveal"
+						src="./assets/logo-balsa.png"
+						alt="logo"
 				/></a>
 				<input type="checkbox" name="menu-toggle" id="menu-toggle" />
-				<label for="menu-toggle" class="outside-toggle menu-toggle">Menu</label>
+				<label
+					for="menu-toggle"
+					class="outside-toggle menu-toggle header-reveal"
+					>Menu</label
+				>
 				<div class="menu">
 					<label for="menu-toggle" class="inside-toggle menu-toggle"
 						>Menu</label
@@ -79,18 +86,26 @@
 		</header>
 		<main class="about-page">
 			<section class="abt--section abt--atf">
-				<h1>Desde 2018, Balsa Arquitetura</h1>
+				<span class="heading-wrapper h1-wrapper"
+					><h1 class="main-heading">Desde 2018, Balsa Arquitetura</h1></span
+				>
 				<!-- <h1>Lorem Ipsum Dolor Sit Elipsit</h1> -->
 				<!-- <img src="https://via.placeholder.com/1352x357" alt="" /> -->
-				<div class="img-wrapper">
-					<img src="./assets/projetos/houmei/hm-1.jpeg" alt="" />
+				<div class="img-wrapper-reveal">
+					<img
+						class="img-reveal"
+						src="./assets/projetos/houmei/hm-1.jpeg"
+						alt=""
+					/>
 				</div>
 			</section>
 			<section class="abt--section abt--about-studio">
 				<div class="about-studio-text">
-					<span class="heading-wrapper"
-						><h2>Arquitetura com foco em projetos comerciais</h2></span
-					>
+					<span class="heading-wrapper h2-wrapper">
+						<h2 class="heading-reveal">
+							Arquitetura com foco em projetos comerciais
+						</h2>
+					</span>
 					<div>
 						<p>
 							Criamos espaços autênticos e funcionais combinando conceitos
@@ -106,8 +121,12 @@
 				</div>
 				<div class="about-studio-image">
 					<figure>
-						<div class="img-wrapper">
-							<img src="https://via.placeholder.com/1001x708" alt="" />
+						<div class="img-wrapper-reveal">
+							<img
+								class="img-reveal"
+								src="https://via.placeholder.com/1001x708"
+								alt=""
+							/>
 						</div>
 						<figcaption>Lorem ipsum dolor sit amet.</figcaption>
 					</figure>
@@ -195,9 +214,11 @@
 				</ul>
 			</section> -->
 			<section class="abt--section abt--client-logos">
-				<span class="heading-wrapper"
-					><h2>Marcas que fazem parte da nossa história</h2></span
-				>
+				<span class="heading-wrapper h2-wrapper">
+					<h2 class="heading-reveal">
+						Marcas que fazem parte da nossa história
+					</h2>
+				</span>
 				<ul class="client-logo-list">
 					<li>
 						<img src="./assets/client-logos/client-logo--samsung.png" alt="" />
@@ -227,17 +248,23 @@
 			</section>
 			<section class="abt--section abt--about-team">
 				<div class="about-team-text">
-					<span class="heading-wrapper"
-						><h2>Commodo, turpis diam neque dolor viverra.</h2></span
-					>
+					<span class="heading-wrapper h2-wrapper">
+						<h2 class="heading-reveal">
+							Commodo, turpis diam neque dolor viverra.
+						</h2>
+					</span>
 				</div>
 				<div class="about-partners-container">
 					<div class="about-partner about-sarah">
 						<figure>
 							<figcaption>Sarah Floresta, arquiteta</figcaption>
 							<!-- <img src="https://via.placeholder.com/387x460" alt="" /> -->
-							<div class="img-wrapper">
-								<img src="./assets/partners-pics/sarah.jpeg" alt="" />
+							<div class="img-wrapper-reveal">
+								<img
+									class="img-reveal"
+									src="./assets/partners-pics/sarah.jpeg"
+									alt=""
+								/>
 							</div>
 						</figure>
 						<div class="about-partner-text">
@@ -254,8 +281,12 @@
 					<div class="about-partner about-paulo">
 						<figure>
 							<!-- <img src="https://via.placeholder.com/387x460" alt="" /> -->
-							<div class="img-wrapper">
-								<img src="./assets/partners-pics/paulo.jpeg" alt="" />
+							<div class="img-wrapper-reveal">
+								<img
+									class="img-reveal"
+									src="./assets/partners-pics/paulo.jpeg"
+									alt=""
+								/>
 							</div>
 							<figcaption>Paulo Augusto, arquiteto</figcaption>
 						</figure>
@@ -273,7 +304,9 @@
 				</div>
 			</section>
 			<section class="abt--section abt--cta-section">
-				<span class="heading-wrapper"><h2>Vamos conversar?</h2></span>
+				<span class="heading-wrapper h2-wrapper">
+					<h2 class="heading-reveal">Vamos conversar?</h2>
+				</span>
 				<a class="link-button" href="#">Entrar em Contato</a>
 			</section>
 		</main>
@@ -313,6 +346,6 @@
 				</ul>
 			</div>
 		</footer>
-		<script src="about-anim.js"></script>
+		<script src="elem-load-anim.js"></script>
 	</body>
 </html>

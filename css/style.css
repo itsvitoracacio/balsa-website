@@ -41,6 +41,7 @@ body {
 
 main:not(.home) {
 	padding-bottom: 5rem;
+	opacity: 0;
 }
 
 h1,
@@ -101,7 +102,7 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-	.heading-wrapper {
+	.h2-wrapper {
 		max-width: 50%;
 	}
 	.tagline {
