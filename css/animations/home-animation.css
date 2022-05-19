@@ -118,3 +118,7 @@
 		transform: translateY(0);
 	}
 }
+
+.homepage .gap {
+	width: 0.32rem;
+}

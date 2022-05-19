@@ -1,3 +1,5 @@
+const swup = new Swup()
+
 document.body.addEventListener('mousewheel', function () {
 	const projDetails = document.querySelector('.project-details')
 	const projName = document.querySelector('.cur-proj-name')

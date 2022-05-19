@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body class="homepage">
-		<div class="page-loader-container">
+		<!-- <div class="page-loader-container">
 			<div class="big-rectangle rect-top"></div>
 			<div class="big-rectangle rect-bottom"></div>
 			<svg
@@ -51,19 +51,19 @@
 					/>
 				</clipPath>
 			</svg>
-			<!-- <div class="loading-progress"
+			<div class="loading-progress"
 				><span class="load-number load-hundreds"></span
 				><span class="load-number load-tens"></span
 				><span class="load-number load-units"></span>
-			</div> -->
-		</div>
+			</div>
+		</div> -->
 		<header>
 			<div class="header-top">
 				<a href="/index.html"
-					><img src="./assets/logo-balsa.png" alt="logo" class="logo"
+					><img src="./assets/logo-balsa.png" alt="logo" class="logo header-reveal"
 				/></a>
 				<input type="checkbox" name="menu-toggle" id="menu-toggle" />
-				<label for="menu-toggle" class="outside-toggle menu-toggle">Menu</label>
+				<label for="menu-toggle" class="outside-toggle menu-toggle header-reveal">Menu</label>
 				<div class="menu">
 					<label for="menu-toggle" class="inside-toggle menu-toggle"
 						>Menu</label
@@ -116,19 +116,21 @@
 				</div>
 			</div>
 			<div class="header-bottom">
-				<span class="tagline"
+				<span class="tagline header-reveal"
 					>Arquitetura e design de interiores em BH e SP</span
 				>
 			</div>
 		</header>
 		<main id="swup" class="home">
 			<section id="home-atf">
-				<div class="heading-container">
-					<h2 class="big-heading transition-fade-heading">
+				<div class="heading-container header-reveal">
+					<!-- <span class="heading-wrapper"> -->
+					<span class="home-main-heading big-heading transition-fade-heading">
 						Lorem ipsum dolor sit amet veniam, consectetur adipising elit
-					</h2>
+					</span>
+					<!-- </span> -->
 				</div>
-				<div class="project-details">
+				<div class="project-details header-reveal">
 					<span class="proj-name cur-proj-name">HOU MEI Asian Food Bar</span>
 					<span class="proj-category cur-proj-cat">Comer e Beber</span>
 					<span class="proj-name hidden-proj-name"
@@ -136,7 +138,7 @@
 					>
 					<span class="proj-category hidden-proj-cat">Comer e Beber</span>
 				</div>
-				<div class="proj-count">
+				<div class="proj-count header-reveal">
 					<span class="proj-number">
 						<span>0</span>
 						<span class="changing-number">
@@ -146,28 +148,33 @@
 					</span>
 					<span class="total-proj-count">04</span>
 				</div>
-				<div class="proj-thumb-wrapper pic1 transition-proj-thumb-wrapper">
-					<h2 class="alt-big-heading transition-fade-heading">
+				<div class="proj-thumb-wrapper pic1 transition-proj-thumb-wrapper header-reveal">
+					<!-- <span class="heading-wrapper"> -->
+					<span class="home-main-heading alt-big-heading transition-fade-heading">
 						Lorem ipsum dolor sit amet veniam, consectetur adipising elit
-					</h2>
+					</span>
+					<!-- </span> -->
 					<a class="proj-thumb-link" href="/project.html">
-						<img
-							class="main-proj-thumb"
-							src="./assets/compressed-image.jpeg"
-							alt=""
-						/>
+						<div class="img-wrapper-reveal">
+							<img
+								class="main-proj-thumb img-reveal"
+								src="./assets/compressed-image.jpeg"
+								alt=""
+							/>
+						</div>
 					</a>
 				</div>
-				<a class="bottom-button link-button" href="#">Ver Todos Os Projetos</a>
+				<a class="bottom-button link-button header-reveal" href="#">Ver Todos Os Projetos</a>
 			</section>
 		</main>
 		<footer>
-			<a class="email" href="mailto:contato@balsaarquitetura.com.br"
+			<a class="email header-reveal" href="mailto:contato@balsaarquitetura.com.br"
 				>contato@balsaarquitetura.com.br</a
 			>
 		</footer>
 		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 		<script src="script.js"></script>
 		<script src="homepage.js"></script>
+		<script src="elem-load-anim.js"></script>
 	</body>
 </html>

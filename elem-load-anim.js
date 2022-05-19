@@ -1,6 +1,7 @@
-const footerElem = [...document.querySelectorAll('.footer-reveal')]
-const headerElem = [...document.querySelectorAll('.header-reveal')]
 const mainHeading = document.querySelector('.main-heading')
+const homeMainHeading = [...document.querySelectorAll('.home-main-heading')]
+const headerElem = [...document.querySelectorAll('.header-reveal')]
+const footerElem = [...document.querySelectorAll('.footer-reveal')]
 const heading = [...document.querySelectorAll('.heading-reveal')]
 const img = [...document.querySelectorAll('.img-reveal')]
 const imgCover = [...document.querySelectorAll('.img-wrapper-reveal')]
@@ -15,6 +16,7 @@ const obsOptions = {
 }
 
 const mainHeadingObs = new IntersectionObserver(showDramatic, obsOptions)
+const homeHeadingObs = new IntersectionObserver(showHomeDramatic, obsOptions)
 const footerElemObs = new IntersectionObserver(showFooter, obsOptions)
 const headingObs = new IntersectionObserver(addShowingTag, obsOptions)
 const imgCoverObs = new IntersectionObserver(addShowingTag, obsOptions)
@@ -44,6 +46,20 @@ function showDramatic(entries) {
 	//     entry.target.innerHTML = headingText
 	//   })
 	// }, 10000)
+}
+
+function showHomeDramatic(entries) {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			const spans = [...entry.target.querySelectorAll('span')]
+			spans.forEach((span, i) => {
+				setTimeout(() => {
+					// console.log(span)
+					span.classList.add('showing')
+				}, i * 12)
+			})
+		}
+	})
 }
 
 function showFooter(entries) {
@@ -104,17 +120,40 @@ function fromTextToSpans(elem) {
 	elem.innerHTML = newString
 }
 
+function homeTextToSpans(elem) {
+	let newString = ''
+	const elementText = elem.innerText.split('')
+	// console.log(elementText)
+	elementText.map(letter => {
+		// newString += `<span>${letter}</span>`
+		newString +=
+			letter === ' ' ? `<span class="gap"> </span>` : `<span>${letter}</span>`
+	})
+	elem.innerHTML = newString
+}
+
 function addObs(elem, observer) {
 	elem.forEach(e => observer.observe(e))
 }
 
 setTimeout(() => {
 	headerElem.forEach(elem => elem.classList.add('header-reveal-on'))
+
 	document.querySelector('main').style.opacity = '1'
+
+	// fromTextToSpans(mainHeading)
+	// mainHeadingObs.observe(mainHeading)
+
+	homeMainHeading.forEach(homeHeading => {
+		homeTextToSpans(homeHeading)
+		homeHeadingObs.observe(homeHeading)
+	})
+	// homeMainHeading.forEach(homeHeading => homeHeadingObs.observe(homeHeading))
+	// homeHeadingObs.observe(homeMainHeading)
+
+	// clientLogoListObs.observe(clientLogoList)
+
 	addObs(footerElem, footerElemObs)
-	fromTextToSpans(mainHeading)
-	mainHeadingObs.observe(mainHeading)
-	clientLogoListObs.observe(clientLogoList)
 	addObs(heading, headingObs)
 	addObs(img, imgObs)
 	addObs(imgCover, imgCoverObs)

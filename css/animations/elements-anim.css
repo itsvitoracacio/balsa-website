@@ -2,6 +2,7 @@
 	overflow: hidden;
 }
 
+.home-main-heading span,
 .main-heading span,
 .client-logo-list li {
 	display: inline-block;
@@ -14,6 +15,7 @@
 	transition: 0.75s ease-out 6.25s;
 } */
 
+.home-main-heading span.showing,
 .main-heading span.showing,
 .client-logo-list li.showing {
 	transform: translateY(0);

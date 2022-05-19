@@ -1,5 +1,3 @@
-// const swup = new Swup()
-
 document
 	.querySelector('.outside-toggle')
 	.addEventListener('click', changeHeaderZIndex)
