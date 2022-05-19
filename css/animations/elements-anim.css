@@ -114,15 +114,15 @@ div.showing::after {
 
 .figcaption-reveal span {
 	position: relative;
-	/* opacity: 0; */
+	opacity: 0;
 }
 
 .figcaption-reveal span.showing {
-	/* animation: 0.05s fade-in ease 1s both; */
+	animation: 0.25s fade-in ease both;
 }
 
-.figcaption-reveal span::after {
-	/* content: ''; */
+.figcaption-reveal span.showing::after {
+	content: '';
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -130,5 +130,9 @@ div.showing::after {
 	background-color: var(--balsa-blue);
 	position: absolute;
 	/* opacity: 0; */
-	/* animation: 0.05s fade-in ease 1s both, figcaption-reveal 0.5s ease 1s both; */
+}
+
+.figcaption-reveal span.reveal::after {
+	animation: figcaption-reveal 0.5s ease 0.5s both;
+
 }

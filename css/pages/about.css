@@ -330,6 +330,7 @@ section.abt--cta-section {
 	}
 	.about-paulo figure {
 		padding-left: 3rem;
+		align-items: flex-start;
 	}
 	.about-paulo div {
 		text-align: right;

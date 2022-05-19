@@ -66,8 +66,9 @@ function showFigcaption(entries) {
 		if (entry.isIntersecting) {
 			const letters = [...entry.target.querySelectorAll('span')]
 			letters.forEach((letter, i) => {
+				letter.classList.add('showing')
 				setTimeout(() => {
-					letter.classList.add('showing')
+					letter.classList.add('reveal')
 				}, i * 450)
 			})
 		}
