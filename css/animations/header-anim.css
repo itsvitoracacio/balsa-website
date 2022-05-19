@@ -1,12 +1,10 @@
 .header-reveal {
 	opacity: 0;
-	transition: 0.5s ease 0.1;
-	transform: translateY(100%);
+	transition: 0.5s ease 0.1s;
 }
 
 .header-reveal-on {
 	opacity: 1;
-	transform: translateY(0);
 }
 
 /* HOVER ON MENU TOGGLE FOR THE CIRCLE TO APPEAR */

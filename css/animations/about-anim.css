@@ -5,11 +5,12 @@
 .about-page h2 {
 	transform: translateY(135%) skewY(7deg);
 	opacity: 0;
-	transition: 1s cubic-bezier(.24,1.15,.5,1);
+	transition: 1s cubic-bezier(0.24, 1.15, 0.5, 1);
 }
 
 .abt--cta-section h2 {
 	transform: translateY(200%) skewY(7deg);
+	transition: 1s cubic-bezier(0.24, 1.15, 0.5, 1) 0.15s;
 }
 
 .about-page h2.showing {

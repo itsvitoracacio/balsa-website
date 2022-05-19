@@ -266,6 +266,7 @@
 	height: 35vh;
 	justify-content: space-between;
 	margin-left: var(--hf-padding-horz);
+	position: relative;
 }
 
 /* This rule is separated from the block above because of specifity overwriting */

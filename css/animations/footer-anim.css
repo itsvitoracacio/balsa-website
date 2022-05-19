@@ -1,0 +1,8 @@
+footer .footer-piece {
+	opacity: 0;
+	transition: 0.75s ease-out 0.25s;
+}
+
+footer .footer-piece.showing {
+	opacity: 1;
+}
