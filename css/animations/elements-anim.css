@@ -136,5 +136,4 @@ div.showing::after {
 
 .figcaption-reveal span.reveal::after {
 	animation: figcaption-reveal 0.5s ease 0.5s both;
-
 }

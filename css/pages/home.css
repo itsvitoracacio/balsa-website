@@ -45,6 +45,10 @@ body {
 	max-height: 50vh;
 }
 
+.homepage .img-wrapper-reveal {
+	max-height: 41.5vh;
+}
+
 .proj-thumb-link {
 	width: 100%;
 }
@@ -137,7 +141,6 @@ body {
 	transform: translateY(-60%);
 	height: 1.15rem;
 	/* background-color: coral; */
-
 }
 
 .block3,
@@ -183,13 +186,15 @@ body {
 .proj-number {
 	border-bottom: 3px solid var(--balsa-blue);
 	overflow: hidden;
+	height: calc(4rem * 1.15);
 }
 
 .changing-number {
 	position: relative;
 }
 
-.cur-proj-number, .hidden-proj-number {
+.cur-proj-number,
+.hidden-proj-number {
 	position: absolute;
 }
 

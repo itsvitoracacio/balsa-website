@@ -47,58 +47,90 @@
 		transform: scale(1);
 	}
 }
-
-
+/* 
+	up: 0-.25s / .8s-1.3s
+	down: 0.2s-.55s / .5s-.9s
+ */
 .hideUpText {
-	animation: hideUp 0.25s ease-out forwards;
+	/* animation: hideUp 0.25s ease-out forwards; */
+	animation: test1 1s ease-out forwards;
+}
+@keyframes test1 {
+	0% {
+		transform: translateY(50%);
+	}
+	19.23% {
+		transform: translateY(-50%);
+	}
+	61.54% {
+		transform: translateY(-50%);
+	}
+	100% {
+		transform: translateY(50%);
+	}
 }
 .hideDownText {
-	animation: hideDown 0.35s ease-out forwards 0.20s;
+	/* animation: hideDown 0.35s ease-out forwards 0.2s; */
+	animation: test2 0.9s ease-out forwards;
+}
+@keyframes test2 {
+	0% {
+		transform: translateY(-50%);
+	}
+	22.22% {
+		transform: translateY(-50%);
+	}
+	58.33% {
+		transform: translateY(50%);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
 }
 .showUpText {
 	animation: showUp 0.4s ease-out forwards 0.5s;
 }
 .slideUpThenDownBlock {
-	animation: slideUp 0.20s forwards, thenSlideDown 0.25s forwards 0.75s;
+	animation: slideUp 0.2s forwards, thenSlideDown 0.25s forwards 0.75s;
 }
 .showDownText {
 	animation: showDown 0.5s ease-out forwards 0.8s;
 }
 
 
-
-@keyframes hideUp {
+/* @keyframes hideUp {
 	to {
 		transform: translateY(-50%);
 		visibility: hidden;
 	}
-}
+} */
 @keyframes slideUp {
 	to {
 		transform: translateY(30%);
 	}
 }
-@keyframes hideDown {
+
+/* @keyframes hideDown {
 	to {
 		transform: translateY(50%);
 		visibility: hidden;
 	}
-}
+} */
 @keyframes showUp {
 	to {
 		transform: translateY(-50%);
-		visibility: visible;
+		/* visibility: visible; */
 	}
 }
 @keyframes thenSlideDown {
 	100% {
-		transform: translateY(150%)
+		transform: translateY(150%);
 	}
 }
 @keyframes showDown {
 	to {
 		transform: translateY(50%);
-		visibility: visible;
+		/* visibility: visible; */
 	}
 }
 
@@ -119,6 +151,81 @@
 	}
 }
 
-.homepage .gap {
+.home .gap {
 	width: 0.32rem;
+}
+
+.proj-reveal {
+	opacity: 0;
+}
+
+.proj-reveal-on {
+	animation: reveal-proj 0.5s ease 0.35s forwards;
+}
+
+@keyframes reveal-proj {
+	to {
+		opacity: 1;
+	}
+}
+
+.button-reveal {
+	opacity: 0;
+}
+
+.button-reveal.showing {
+	animation: 0.5s fade-in ease 0.75s both;
+}
+
+.button-reveal.showing::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background-color: var(--balsa-blue);
+	position: absolute;
+}
+
+.button-reveal.reveal::after {
+	animation: button-reveal 0.5s ease 0.75s both;
+}
+
+@keyframes button-reveal {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0;
+	}
+}
+
+.changing-number::before,
+.changing-number::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: 1.3s ease-in-out;
+}
+
+.changing-number::before {
+	content: attr(data-before);
+	transform: translateY(100%);
+	/* transition: 1.3s ease; */
+}
+.changing-number::after {
+	content: attr(data-after);
+	transform: translateY(200%);
+}
+
+.changing-number.roll::before {
+	transform: translateY(200%);
+}
+.changing-number.roll::after {
+	transform: translateY(100%);
+}
+
+
+.proj-deets-block {
+	/* background-color: red; */
 }

@@ -1,6 +1,7 @@
 const mainHeading = document.querySelector('.main-heading')
 const homeMainHeading = [...document.querySelectorAll('.home-main-heading')]
 const headerElem = [...document.querySelectorAll('.header-reveal')]
+const projElem = [...document.querySelectorAll('.proj-reveal')]
 const footerElem = [...document.querySelectorAll('.footer-reveal')]
 const heading = [...document.querySelectorAll('.heading-reveal')]
 const img = [...document.querySelectorAll('.img-reveal')]
@@ -8,6 +9,7 @@ const imgCover = [...document.querySelectorAll('.img-wrapper-reveal')]
 const p = [...document.querySelectorAll('p')]
 const ctaSection = [...document.querySelectorAll('.section-reveal')]
 const figcaption = [...document.querySelectorAll('.figcaption-reveal')]
+const button = document.querySelector('.button-reveal')
 const clientLogoList = document.querySelector('.client-logo-list')
 
 const obsOptions = {
@@ -138,6 +140,11 @@ function addObs(elem, observer) {
 
 setTimeout(() => {
 	headerElem.forEach(elem => elem.classList.add('header-reveal-on'))
+	projElem.forEach(elem => elem.classList.add('proj-reveal-on'))
+	button.classList.add('showing')
+	setTimeout(() => {
+		button.classList.add('reveal')
+	}, 500)
 
 	document.querySelector('main').style.opacity = '1'
 
