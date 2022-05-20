@@ -20,14 +20,6 @@ document.body.addEventListener('click', function () {
 	hiddenNameArr[0].classList.add('showUpText')
 	hiddenCatArr[0].classList.add('showDownText')
 
-	console.log(projName)
-	console.log(
-		`
-		0: ${hiddenNameArr[0].innerHTML},
-		1: ${hiddenNameArr[1].innerHTML},
-		2: ${hiddenNameArr[2].innerHTML}`
-	)
-
 	setTimeout(() => {
 		projName.classList.remove('hideDownText')
 		projCategory.classList.remove('hideUpText')
@@ -53,15 +45,34 @@ document.body.addEventListener('click', function () {
 
 		projName = document.querySelector('.cur-proj-name')
 		projCategory = document.querySelector('.cur-proj-cat')
-		// console.log(projName)
-		// console.log(hiddenNameArr[1])
 	}, 1500)
 })
 
-document.body.addEventListener('mousewheel', function () {
-	const curProjNum = document.querySelector('.cur-proj-number')
-	const hiddenProjNum = document.querySelector('.hidden-proj-number')
+let curProjNum = document.querySelector('.cur-proj-number')
+const hiddenProjNum = [...document.querySelectorAll('.hidden-proj-number')]
+let nextProjNum = hiddenProjNum[0]
+let prevProjNum = hiddenProjNum[hiddenProjNum.length - 1]
+
+document.body.addEventListener('click', function () {
 
 	curProjNum.classList.add('rollOutProjNum')
-	hiddenProjNum.classList.add('rollInProjNum')
+	nextProjNum.classList.add('rollInProjNum')
+
+
+	setTimeout(() => {
+		curProjNum.classList.remove('rollOutProjNum')
+		nextProjNum.classList.remove('rollInProjNum')
+		
+		curProjNum.classList.remove('cur-proj-number')
+		curProjNum.classList.add('hidden-proj-number')
+		nextProjNum.classList.remove('hidden-proj-number')
+		nextProjNum.classList.add('cur-proj-number')
+
+		hiddenProjNum.shift()
+		hiddenProjNum.push(curProjNum)
+		
+		nextProjNum = hiddenProjNum[0]
+		prevProjNum = hiddenProjNum[hiddenProjNum.length - 1]
+		curProjNum = document.querySelector('.cur-proj-number')
+	}, 1500)
 })
