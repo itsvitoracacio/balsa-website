@@ -2,9 +2,15 @@
 	--water-fill-duration: 4.7s;
 	--site-load-duration: 5.2s;
 	--load-bg-color: var(--light-bg);
+	/* --load-bg-color: #0D46B4; */
 	--load-line-color: var(--balsa-blue);
+	/* --load-line-color: var(--light-bg); */
 	--bowl-color: var(--light-bg);
-	--fill-color: var(--light-blue);
+	/* --bowl-color: #0D46B4; */
+	/* --bowl-color: var(--light-blue); */
+	/* --fill-color: var(--light-blue); */
+	--fill-color: var(--balsa-blue);
+	/* --fill-color: #0D46B4; */
 }
 
 .page-loader-container {
@@ -24,7 +30,8 @@
 	animation: rect-shrink 1.25s ease var(--site-load-duration) both;
 	z-index: 10;
 	background-color: var(--load-bg-color);
-	background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png');
+	/* background-color: var(--balsa-blue); */
+	/* background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png'); */
 }
 
 .rect-top {
@@ -69,7 +76,9 @@
 .loading-progress {
 	position: absolute;
 	z-index: 12;
-	color: var(--balsa-blue);
+	/* color: var(--balsa-blue); */
+	/* color: #0D46B4; */
+	color: var(--light-bg);
 	/* color: black; */
 	line-height: 3rem;
 	font-size: 3.25rem;
@@ -90,28 +99,27 @@
 	/* background-color: red; */
 }
 
-
 .load-tens::after,
 .load-units::after {
-	content: "0 1 2 3 4 5 6 7 8 9";
+	content: '0 1 2 3 4 5 6 7 8 9';
 	position: relative;
 }
 
 .load-hundreds::after {
-	content: "0 0 0 0 0 0 0 0 0 0 1";
+	content: '0 0 0 0 0 0 0 0 0 0 1';
 	position: relative;
 }
 
 .load-hundreds {
-	animation: countUp 4.85s steps(10) forwards;
+	animation: countUp 4.75s steps(10) forwards;
 }
 
 .load-tens {
-	animation: countUp 4.85s steps(10);
+	animation: countUp 4.75s steps(10);
 }
 
 .load-units {
-	animation: countUp 0.485s steps(10) 10;
+	animation: countUp 0.475s steps(10) 10;
 }
 
 @keyframes countUp {
@@ -155,4 +163,3 @@
 		transform: translateX(-273px);
 	}
 }
-

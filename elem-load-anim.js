@@ -138,33 +138,51 @@ function addObs(elem, observer) {
 	elem.forEach(e => observer.observe(e))
 }
 
-setTimeout(() => {
-	headerElem.forEach(elem => elem.classList.add('header-reveal-on'))
-	projElem.forEach(elem => elem.classList.add('proj-reveal-on'))
-	button.classList.add('showing')
+if (document.querySelector('main').classList.contains('home')) {
 	setTimeout(() => {
-		button.classList.add('reveal')
-	}, 500)
+		document.querySelector('main').style.opacity = '1'
+		headerElem.forEach(elem => elem.classList.add('header-reveal-on'))
+		projElem.forEach(elem => elem.classList.add('proj-reveal-on'))
+		button.classList.add('showing')
+		setTimeout(() => {
+			button.classList.add('reveal')
+		}, 500)
+		
+		setTimeout(() => {
+			img.forEach(i => i.classList.remove('img-reveal'))
+		}, 1750);
+		addObs(img, imgObs)
+		addObs(imgCover, imgCoverObs)
+		addObs(figcaption, figcaptionObs)
+	}, 5500)
+}
 
-	document.querySelector('main').style.opacity = '1'
+// setTimeout(() => {
+// 	headerElem.forEach(elem => elem.classList.add('header-reveal-on'))
+// 	if (document.querySelector('main').classList.contains('home')) {
+// 		projElem.forEach(elem => elem.classList.add('proj-reveal-on'))
+// 		button.classList.add('showing')
+// 		setTimeout(() => {
+// 			button.classList.add('reveal')
+// 		}, 500)
+// 	}
 
-	// fromTextToSpans(mainHeading)
-	// mainHeadingObs.observe(mainHeading)
+	
+// 	if (document.querySelector('main').classList.contains('about-page')) {
+// 		document.querySelector('main').style.opacity = '1'
+		
+// 		// fromTextToSpans(mainHeading)
+// 		// mainHeadingObs.observe(mainHeading)
 
-	homeMainHeading.forEach(homeHeading => {
-		homeTextToSpans(homeHeading)
-		homeHeadingObs.observe(homeHeading)
-	})
-	// homeMainHeading.forEach(homeHeading => homeHeadingObs.observe(homeHeading))
-	// homeHeadingObs.observe(homeMainHeading)
+// 		clientLogoListObs.observe(clientLogoList)
+// 	}
 
-	// clientLogoListObs.observe(clientLogoList)
 
-	addObs(footerElem, footerElemObs)
-	addObs(heading, headingObs)
-	addObs(img, imgObs)
-	addObs(imgCover, imgCoverObs)
-	addObs(p, pObs)
-	addObs(ctaSection, ctaSectionObs)
-	addObs(figcaption, figcaptionObs)
-}, 500)
+// 	addObs(footerElem, footerElemObs)
+// 	addObs(heading, headingObs)
+// 	addObs(img, imgObs)
+// 	addObs(imgCover, imgCoverObs)
+// 	addObs(p, pObs)
+// 	addObs(ctaSection, ctaSectionObs)
+// 	addObs(figcaption, figcaptionObs)
+// }, 500)

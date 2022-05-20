@@ -8,6 +8,7 @@
 	/* --balsa-blue: #fcfaf7; */
 	--light-bg: #fcfaf7;
 	--light-blue: rgba(0, 21, 160, 0.6);
+	/* --light-blue: #0d46b4; */
 	--lighter-blue: rgba(0, 21, 160, 0.3);
 
 	/* paddings */
@@ -39,9 +40,12 @@ body {
 	/* background-image: url('https://www.transparenttextures.com/patterns/black-orchid.png') repeat 50%/400px 200px; */
 }
 
+main {
+	opacity: 0;
+}
+
 main:not(.home) {
 	padding-bottom: 5rem;
-	opacity: 0;
 }
 
 h1,

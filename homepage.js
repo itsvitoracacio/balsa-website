@@ -30,8 +30,6 @@ const mainProjs = [
 function changeMainProjThumb(e) {
 	const DOMAIN_NAME = 'http://127.0.0.1:5500'
 	const mainProjThumb = document.querySelector('.main-proj-thumb')
-	const hasSpecificClass = mainProjThumb.classList.contains('img-reveal')
-	if (hasSpecificClass) mainProjThumb.classList.remove('img-reveal')
 
 	const curSrc = mainProjThumb.src.split(DOMAIN_NAME)[1]
 	const curIndex = mainProjs.findIndex(proj => proj.projThumbSrc === curSrc)
@@ -79,21 +77,6 @@ function changeProjNum(e, domNum, curProj, nextProj, prevProj) {
 	}, 1300)
 }
 
-document.body.addEventListener('wheel', e => {
-	const domNum = document.querySelector('.changing-number')
-	const isCurProj = proj => proj.projNum === Number(domNum.innerText)
-	const curIndex = mainProjs.findIndex(isCurProj)
-	const curProj = mainProjs[curIndex]
-	const nextProj =
-		curIndex === mainProjs.length - 1 ? mainProjs[0] : mainProjs[curIndex + 1]
-	const prevProj =
-		curIndex === 0 ? mainProjs[mainProjs.length - 1] : mainProjs[curIndex - 1]
-
-	changeMainProjThumb(e)
-	changeProjNum(e, domNum, curProj, nextProj, prevProj)
-	changeProjDeets(e, nextProj, prevProj)
-})
-
 function changeProjDeets(e, nextProj, prevProj) {
 	const projDetails = document.querySelector('.project-details')
 	const projName = document.querySelector('.proj-name')
@@ -125,50 +108,17 @@ function changeProjDeets(e, nextProj, prevProj) {
 	}, 1300)
 }
 
-const projDetails = document.querySelector('.project-details')
-let projName = document.querySelector('.cur-proj-name')
-let projCategory = document.querySelector('.cur-proj-cat')
-let hiddenNameArr = [...document.querySelectorAll('.hidden-proj-name')]
-let hiddenCatArr = [...document.querySelectorAll('.hidden-proj-cat')]
+document.body.addEventListener('wheel', e => {
+	const domNum = document.querySelector('.changing-number')
+	const isCurProj = proj => proj.projNum === Number(domNum.innerText)
+	const curIndex = mainProjs.findIndex(isCurProj)
+	const curProj = mainProjs[curIndex]
+	const nextProj =
+		curIndex === mainProjs.length - 1 ? mainProjs[0] : mainProjs[curIndex + 1]
+	const prevProj =
+		curIndex === 0 ? mainProjs[mainProjs.length - 1] : mainProjs[curIndex - 1]
 
-document.body.addEventListener('', function () {
-	const block1 = document.createElement('div')
-	const block2 = document.createElement('div')
-	block1.classList.add('proj-deets-block', 'block1')
-	block2.classList.add('proj-deets-block', 'block2', 'slideUpThenDownBlock')
-
-	projDetails.insertBefore(block1, projName)
-	projDetails.appendChild(block2)
-	projName.classList.add('hideDownText')
-	projCategory.classList.add('hideUpText')
-
-	hiddenNameArr[0].classList.add('showUpText')
-	hiddenCatArr[0].classList.add('showDownText')
-
-	setTimeout(() => {
-		projName.classList.remove('hideDownText')
-		projCategory.classList.remove('hideUpText')
-		hiddenNameArr[0].classList.remove('showUpText')
-		hiddenCatArr[0].classList.remove('showDownText')
-		document.querySelector('.block1').remove()
-		document.querySelector('.block2').remove()
-
-		projName.classList.add('hidden-proj-name')
-		projCategory.classList.add('hidden-proj-cat')
-		projName.classList.remove('cur-proj-name')
-		projCategory.classList.remove('cur-proj-cat')
-
-		hiddenNameArr[0].classList.add('cur-proj-name')
-		hiddenCatArr[0].classList.add('cur-proj-cat')
-		hiddenNameArr[0].classList.remove('hidden-proj-name')
-		hiddenCatArr[0].classList.remove('hidden-proj-cat')
-
-		hiddenNameArr.shift()
-		hiddenNameArr.push(projName)
-		hiddenCatArr.shift()
-		hiddenCatArr.push(projCategory)
-
-		projName = document.querySelector('.cur-proj-name')
-		projCategory = document.querySelector('.cur-proj-cat')
-	}, 1500)
+	changeMainProjThumb(e)
+	changeProjNum(e, domNum, curProj, nextProj, prevProj)
+	changeProjDeets(e, nextProj, prevProj)
 })
