@@ -1,3 +1,5 @@
+// Making the menu appear on top of everything when it's open
+// When going back to the previous page, if the menu was left open, it stays open, but the zIndex isn't correct
 document
 	.querySelector('.outside-toggle')
 	.addEventListener('click', changeHeaderZIndex)
@@ -12,6 +14,7 @@ function changeHeaderZIndex() {
 	else header.style.zIndex = '10'
 }
 
+// Styling the custom cursor
 /* const cursor = document.querySelector('.inner-cursor')
 const cursorWrapper = document.querySelector('.outer-cursor')
 document.addEventListener('mousemove', e => {

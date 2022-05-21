@@ -2,17 +2,12 @@
 	--water-fill-duration: 4.7s;
 	--site-load-duration: 5.2s;
 	--load-bg-color: var(--light-bg);
-	/* --load-bg-color: #0D46B4; */
 	--load-line-color: var(--balsa-blue);
-	/* --load-line-color: var(--light-bg); */
 	--bowl-color: var(--light-bg);
-	/* --bowl-color: #0D46B4; */
-	/* --bowl-color: var(--light-blue); */
-	/* --fill-color: var(--light-blue); */
 	--fill-color: var(--balsa-blue);
-	/* --fill-color: #0D46B4; */
 }
 
+/* Full screen visible area, holding both rectangles */
 .page-loader-container {
 	display: flex;
 	flex-direction: column;
@@ -23,6 +18,7 @@
 	position: absolute;
 }
 
+/* Both rectangles of the loading animation */
 .big-rectangle {
 	width: 100vw;
 	height: 1px;
@@ -30,20 +26,17 @@
 	animation: rect-shrink 1.25s ease var(--site-load-duration) both;
 	z-index: 10;
 	background-color: var(--load-bg-color);
-	/* background-color: var(--balsa-blue); */
-	/* background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png'); */
 }
-
 .rect-top {
 	border-bottom: 0.5px solid var(--load-line-color);
 	top: 0;
 }
-
 .rect-bottom {
 	border-top: 0.5px solid var(--load-line-color);
 	bottom: 0;
 }
 
+/* Making the rectangles "open", DirectorX style */
 @keyframes rect-shrink {
 	from {
 		height: 50vh;
@@ -76,16 +69,12 @@
 .loading-progress {
 	position: absolute;
 	z-index: 12;
-	/* color: var(--balsa-blue); */
-	/* color: #0D46B4; */
 	color: var(--light-bg);
-	/* color: black; */
 	line-height: 3rem;
 	font-size: 3.25rem;
 	font-weight: 700;
 	display: flex;
 	flex-direction: row;
-	/* width: 100%; */
 	overflow: hidden;
 	animation: circle-opacity 0.35s ease var(--site-load-duration) forwards;
 }
@@ -96,7 +85,6 @@
 	text-align: center;
 	vertical-align: center;
 	position: relative;
-	/* background-color: red; */
 }
 
 .load-tens::after,
@@ -105,13 +93,18 @@
 	position: relative;
 }
 
+.load-tens::after {
+	right: 1px;
+}
+
 .load-hundreds::after {
 	content: '0 0 0 0 0 0 0 0 0 0 1';
 	position: relative;
 }
 
 .load-hundreds {
-	animation: countUp 4.75s steps(10) forwards;
+	animation: countUp 4.75s steps(10) forwards,
+		moveRight 0.75s step-end 4s forwards;
 }
 
 .load-tens {
@@ -128,6 +121,15 @@
 	}
 	to {
 		top: -480px;
+	}
+}
+
+@keyframes moveRight {
+	from {
+		right: 0;
+	}
+	to {
+		right: -4px;
 	}
 }
 

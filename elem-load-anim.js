@@ -1,78 +1,108 @@
-const mainHeading = document.querySelector('.main-heading')
-const homeMainHeading = [...document.querySelectorAll('.home-main-heading')]
+//------------ ELEMENTS IN ALL PAGES ------------
 const headerElem = [...document.querySelectorAll('.header-reveal')]
-const projElem = [...document.querySelectorAll('.proj-reveal')]
-const footerElem = [...document.querySelectorAll('.footer-reveal')]
-const heading = [...document.querySelectorAll('.heading-reveal')]
+/* Loads instantly, no need for observing them */
+
 const img = [...document.querySelectorAll('.img-reveal')]
+const imgObs = new IntersectionObserver(addShowingTag, obsOptions)
+
 const imgCover = [...document.querySelectorAll('.img-wrapper-reveal')]
-const p = [...document.querySelectorAll('p')]
-const ctaSection = [...document.querySelectorAll('.section-reveal')]
-const figcaption = [...document.querySelectorAll('.figcaption-reveal')]
+const imgCoverObs = new IntersectionObserver(addShowingTag, obsOptions)
+
+//
+//------------ ELEMENTS ON THE HOMEPAGE ------------
+const projElem = [...document.querySelectorAll('.proj-reveal')]
+/* Loads instantly, no need for observing them */
+
 const button = document.querySelector('.button-reveal')
+/* Loads instantly, no need for observing it */
+
+const homeMainHeading = [...document.querySelectorAll('.home-main-heading')]
+const homeHeadingObs = new IntersectionObserver(showHomeDramatic, obsOptions)
+
+//
+//------------ ELEMENTS ON TEXT PAGES ------------
+const mainHeading = document.querySelector('.main-heading')
+const mainHeadingObs = new IntersectionObserver(showDramatic, obsOptions)
+
+const heading = [...document.querySelectorAll('.heading-reveal')]
+const headingObs = new IntersectionObserver(addShowingTag, obsOptions)
+
+const p = [...document.querySelectorAll('p')]
+const pObs = new IntersectionObserver(addShowingTag, obsOptions)
+
 const clientLogoList = document.querySelector('.client-logo-list')
+const clientLogoListObs = new IntersectionObserver(showClientLogos, obsOptions)
+
+const figcaption = [...document.querySelectorAll('.figcaption-reveal')]
+const figcaptionObs = new IntersectionObserver(showFigcaption, obsOptions)
+
+const ctaSection = [...document.querySelectorAll('.section-reveal')]
+const ctaSectionObs = new IntersectionObserver(addShowingTag, obsOptions)
+
+const footerElem = [...document.querySelectorAll('.footer-reveal')]
+const footerElemObs = new IntersectionObserver(showFooter, obsOptions)
 
 const obsOptions = {
 	rootMargin: '-12%',
 	threshold: 0.0,
 }
 
-const mainHeadingObs = new IntersectionObserver(showDramatic, obsOptions)
-const homeHeadingObs = new IntersectionObserver(showHomeDramatic, obsOptions)
-const footerElemObs = new IntersectionObserver(showFooter, obsOptions)
-const headingObs = new IntersectionObserver(addShowingTag, obsOptions)
-const imgCoverObs = new IntersectionObserver(addShowingTag, obsOptions)
-const imgObs = new IntersectionObserver(addShowingTag, obsOptions)
-const pObs = new IntersectionObserver(addShowingTag, obsOptions)
-const ctaSectionObs = new IntersectionObserver(addShowingTag, obsOptions)
-const figcaptionObs = new IntersectionObserver(showFigcaption, obsOptions)
-const clientLogoListObs = new IntersectionObserver(showClientLogos, obsOptions)
+// function showDramatic(entries) {
+// 	entries.forEach(entry => {
+// 		if (entry.isIntersecting) {
+// 			const spans = [...entry.target.querySelectorAll('span')]
+// 			spans.forEach((span, i) => {
+// 				setTimeout(() => {
+// 					span.classList.add('showing')
+// 				}, i * 12)
+// 			})
+// 		}
+// 	})
+// setTimeout(() => {
+//   entries.forEach(entry => {
+//     let headingText = ''
+//     Array.from(entry.target.children).forEach(letter => {
+//       headingText += letter.classList.contains('gap') ? ' ' : letter.innerText
+//     })
+//     entry.target.innerHTML = headingText
+//   })
+// }, 10000)
+// }
 
-function showDramatic(entries) {
+// function showHomeDramatic(entries) {
+// 	entries.forEach(entry => {
+// 		if (entry.isIntersecting) {
+// 			const spans = [...entry.target.querySelectorAll('span')]
+// 			spans.forEach((span, i) => {
+// 				setTimeout(() => {
+// 					span.classList.add('showing')
+// 				}, i * 12)
+// 			})
+// 		}
+// 	})
+// }
+
+function addShowingStagger(entries, selectTag, stagger) {
 	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			const spans = [...entry.target.querySelectorAll('span')]
-			spans.forEach((span, i) => {
-				setTimeout(() => {
-					span.classList.add('showing')
-				}, i * 12)
-			})
-		}
+		const pieces = [...entry.target.querySelectorAll(selectTag)]
+		pieces.forEach((piece, i) => {
+			setTimeout(() => {
+				piece.classList.add('showing')
+			}, i * stagger)
+		})
 	})
-	// setTimeout(() => {
-	//   entries.forEach(entry => {
-	//     let headingText = ''
-	//     Array.from(entry.target.children).forEach(letter => {
-	//       headingText += letter.classList.contains('gap') ? ' ' : letter.innerText
-	//     })
-	//     entry.target.innerHTML = headingText
-	//   })
-	// }, 10000)
 }
 
-function showHomeDramatic(entries) {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			const spans = [...entry.target.querySelectorAll('span')]
-			spans.forEach((span, i) => {
-				setTimeout(() => {
-					// console.log(span)
-					span.classList.add('showing')
-				}, i * 12)
-			})
-		}
-	})
-}
+addShowingStagger(entries, '.footer-piece', 100)
+addShowingStagger(entries, 'li', 12)
 
 function showFooter(entries) {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			const footerPieces = [...entry.target.querySelectorAll('.footer-piece')]
-			console.log(footerPieces)
 			footerPieces.forEach((piece, i) => {
 				setTimeout(() => {
 					piece.classList.add('showing')
-					console.log(piece)
 				}, i * 100)
 			})
 		}
@@ -140,21 +170,35 @@ function addObs(elem, observer) {
 
 if (document.querySelector('main').classList.contains('home')) {
 	setTimeout(() => {
+		// Opacity starts at 0 so that stuff don't appear before the load animation
 		document.querySelector('main').style.opacity = '1'
+
+		// Loading instantly at page load
 		headerElem.forEach(elem => elem.classList.add('header-reveal-on'))
 		projElem.forEach(elem => elem.classList.add('proj-reveal-on'))
 		button.classList.add('showing')
 		setTimeout(() => {
+			// Big heading loading should go here
 			button.classList.add('reveal')
 		}, 500)
-		
-		setTimeout(() => {
-			img.forEach(i => i.classList.remove('img-reveal'))
-		}, 1750);
+
+		// Adding observers, but this could be converted to instant load since there's no scroll on the homepage
 		addObs(img, imgObs)
 		addObs(imgCover, imgCoverObs)
-		addObs(figcaption, figcaptionObs)
+
+		// Thist tag is needed for the image loading animation, but prevents scaling on hover, so it is removed after the image is loaded.
+		setTimeout(() => {
+			img.forEach(i => i.classList.remove('img-reveal'))
+		}, 1750)
 	}, 5500)
+}
+
+if (document.querySelector('main').classList.contains('about-page')) {
+	setTimeout(() => {
+		document.querySelector('main').style.opacity = '1'
+
+		clientLogoListObs.observe(clientLogoList)
+	}, 500)
 }
 
 // setTimeout(() => {
@@ -167,16 +211,14 @@ if (document.querySelector('main').classList.contains('home')) {
 // 		}, 500)
 // 	}
 
-	
 // 	if (document.querySelector('main').classList.contains('about-page')) {
 // 		document.querySelector('main').style.opacity = '1'
-		
+
 // 		// fromTextToSpans(mainHeading)
 // 		// mainHeadingObs.observe(mainHeading)
 
 // 		clientLogoListObs.observe(clientLogoList)
 // 	}
-
 
 // 	addObs(footerElem, footerElemObs)
 // 	addObs(heading, headingObs)
