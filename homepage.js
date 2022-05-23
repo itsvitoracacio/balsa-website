@@ -5,29 +5,29 @@ const mainProjs = [
 		projNum: 1,
 		projName: 'Hou Mei Asian Food Bar',
 		projCat: 'Comer e Beber',
-		projThumbSrc: '/assets/partners-pics/sarah.jpeg',
+		projThumbSrc: '/assets/projetos/houmei/hm-1.jpeg',
 	},
 	{
 		projNum: 2,
-		projName: 'Estúdio Veste',
+		projName: 'OOP Torrefação',
 		projCat: 'Comercial',
-		projThumbSrc: '/assets/partners-pics/paulo.jpeg',
+		projThumbSrc: '/assets/projetos/oop-torrefacao/oopt-1.jpeg',
 	},
 	{
 		projNum: 3,
-		projName: 'Dorsé Bar e Restaurante',
+		projName: 'Loja da Fazenda Alegria',
 		projCat: 'Comer e Beber',
-		projThumbSrc: '/assets/compressed-image.jpeg',
+		projThumbSrc: '/assets/projetos/fz-alegria/fz-alegria-1.jpeg',
 	},
 	{
 		projNum: 4,
-		projName: 'CD Fazenda Alegria',
-		projCat: 'Logística / Comer e Beber',
-		projThumbSrc: '/assets/logo-balsa.png',
+		projName: 'Cabernet Savassi',
+		projCat: 'Comer e Beber',
+		projThumbSrc: '/assets/projetos/cabernet-savassi/cabernet-savassi-1.jpeg',
 	},
 ]
 
-function changeMainProjThumb(e) {
+function changeMainProjThumbOnScroll(e) {
 	const DOMAIN_NAME = 'http://127.0.0.1:5500'
 	const mainProjThumb = document.querySelector('.main-proj-thumb')
 
@@ -59,7 +59,7 @@ function changeMainProjThumb(e) {
 	}, 650)
 }
 
-function changeProjNum(e, domNum, curProj, nextProj, prevProj) {
+function changeProjNumOnScroll(e, domNum, curProj, nextProj, prevProj) {
 	const oldProjNum = `0${curProj.projNum}`
 	const newProjNum = `0${e.deltaY > 0 ? nextProj.projNum : prevProj.projNum}`
 	domNum.dataset.before = oldProjNum
@@ -77,7 +77,7 @@ function changeProjNum(e, domNum, curProj, nextProj, prevProj) {
 	}, 1300)
 }
 
-function changeProjDeets(e, nextProj, prevProj) {
+function changeProjDeetsOnScroll(e, nextProj, prevProj) {
 	const projDetails = document.querySelector('.project-details')
 	const projName = document.querySelector('.proj-name')
 	const projCat = document.querySelector('.proj-category')
@@ -108,7 +108,10 @@ function changeProjDeets(e, nextProj, prevProj) {
 	}, 1300)
 }
 
+let isCurrentlyScrolling = false
 document.body.addEventListener('wheel', e => {
+	if (isCurrentlyScrolling) return
+	isCurrentlyScrolling = true
 	const domNum = document.querySelector('.changing-number')
 	const isCurProj = proj => proj.projNum === Number(domNum.innerText)
 	const curIndex = mainProjs.findIndex(isCurProj)
@@ -118,7 +121,9 @@ document.body.addEventListener('wheel', e => {
 	const prevProj =
 		curIndex === 0 ? mainProjs[mainProjs.length - 1] : mainProjs[curIndex - 1]
 
-	changeMainProjThumb(e)
-	changeProjNum(e, domNum, curProj, nextProj, prevProj)
-	changeProjDeets(e, nextProj, prevProj)
+	changeMainProjThumbOnScroll(e)
+	changeProjNumOnScroll(e, domNum, curProj, nextProj, prevProj)
+	changeProjDeetsOnScroll(e, nextProj, prevProj)
+
+	setTimeout(() => (isCurrentlyScrolling = false), 1400)
 })

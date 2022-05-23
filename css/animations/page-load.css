@@ -19,7 +19,8 @@
 }
 
 /* Both rectangles of the loading animation */
-.big-rectangle {
+.rect-top,
+.rect-bottom {
 	width: 100vw;
 	height: 1px;
 	position: absolute;
@@ -79,7 +80,9 @@
 	animation: circle-opacity 0.35s ease var(--site-load-duration) forwards;
 }
 
-.load-number {
+.load-hundreds,
+.load-tens,
+.load-units {
 	width: 1.75rem;
 	height: 2.5rem;
 	text-align: center;

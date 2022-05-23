@@ -97,7 +97,6 @@
 	animation: showDown 0.5s ease-out forwards 0.8s;
 }
 
-
 /* @keyframes hideUp {
 	to {
 		transform: translateY(-50%);
@@ -225,7 +224,21 @@
 	transform: translateY(100%);
 }
 
-
 .proj-deets-block {
 	/* background-color: red; */
+}
+
+.home-main-heading.showing {
+	animation: homeHeadingReveal 1.35s ease 1.65s both
+}
+
+@keyframes homeHeadingReveal {
+	from {
+		opacity: 0;
+		filter: blur(4px);
+	}
+	to {
+		opacity: 1;
+		filter: blur(0);
+	}
 }

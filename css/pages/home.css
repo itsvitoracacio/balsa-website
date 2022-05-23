@@ -46,22 +46,22 @@ body {
 }
 
 .homepage .img-wrapper-reveal {
-	max-height: 41.5vh;
+	/* max-height: 41.5vh; */
 }
 
 .proj-thumb-link {
-	width: 100%;
+	/* width: 100%; */
 }
 
-/* HOVER ANIMATION OPTION 1 */
-/* .flowing-pic-wrapper {
-	transition: width .5s;
+.home-img-wrapper {
+	/* height: 40vh; */
+	width: 75vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.flowing-pic-wrapper:hover {
-	width: clamp(13rem, 55vw, 15rem);
-} */
 
-/* HOVER ANIMATION OPTION 2 */
+/* HOVER ANIMATION */
 .main-proj-thumb {
 	transition: 0.6s;
 	transition-timing-function: cubic-bezier(0.43, 0.13, 0.23, 0.96);
@@ -130,8 +130,8 @@ body {
 
 .proj-deets-block {
 	position: absolute;
-	width: 13rem;
-	height: 1rem;
+	width: 15rem;
+	height: 1.1rem;
 	z-index: 1;
 	background-color: var(--light-bg);
 	/* background-color: red; */
