@@ -1,9 +1,9 @@
-// Settings for triggering the intersection
-// Currently, it intesects when the element rolls 12% from any direction into the screen
 const obsOptions = {
 	rootMargin: '-12%',
 	threshold: 0.0,
 }
+// Settings for triggering the intersection
+// Currently, it intesects when the element rolls 12% from any direction into the screen
 
 // Checking which page type we're on
 const isHomepage = document.querySelector('main').classList.contains('home')
