@@ -28,7 +28,7 @@ const mainProjs = [
 ]
 
 function changeMainProjThumbOnScroll(e) {
-	const DOMAIN_NAME = 'http://127.0.0.1:5500'
+	const DOMAIN_NAME = 'https://itsvitoracacio.github.io/balsa-website'
 	const mainProjThumb = document.querySelector('.main-proj-thumb')
 
 	const curSrc = mainProjThumb.src.split(DOMAIN_NAME)[1]
