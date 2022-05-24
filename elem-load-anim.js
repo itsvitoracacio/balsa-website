@@ -1,15 +1,15 @@
-// Checking which page type we're on
-const isHomepage = document.querySelector('main').classList.contains('home')
-const isAboutPage = document
-	.querySelector('main')
-	.classList.contains('about-page')
-
 // Settings for triggering the intersection
 // Currently, it intesects when the element rolls 12% from any direction into the screen
 const obsOptions = {
 	rootMargin: '-12%',
 	threshold: 0.0,
 }
+
+// Checking which page type we're on
+const isHomepage = document.querySelector('main').classList.contains('home')
+const isAboutPage = document
+	.querySelector('main')
+	.classList.contains('about-page')
 
 //------------ ELEMENTS IN ALL PAGES ------------
 /* Loads instantly, no need for observing them */
@@ -48,8 +48,8 @@ if (isHomepage) {
 
 		// This tag is needed for the image loading animation, but prevents scaling on hover, so it is removed after the image is loaded.
 		setTimeout(() => {
-			img.forEach(i => i.classList.remove('img-reveal'))
-		}, 1750)
+			homeImg[0].classList.remove('home-img-reveal')
+		}, 2750)
 	}, 5500)
 }
 

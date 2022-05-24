@@ -9,7 +9,7 @@
 .about-page h1.showing {
 	opacity: 1;
 	filter: blur(0);
-	transition-delay: 1.55s;
+	transition-delay: 1.45s;
 }
 
 .about-page h2 {
