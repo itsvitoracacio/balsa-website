@@ -5,10 +5,9 @@
 :root {
 	/* colors */
 	--balsa-blue: #001aa1;
-	/* --balsa-blue: #fcfaf7; */
-	--light-bg: #fcfaf7;
+	--light-cream: #fcfaf7;
+	--lighter-cream: rgba(245, 238, 228, 0.66);
 	--light-blue: rgba(0, 21, 160, 0.6);
-	/* --light-blue: #0d46b4; */
 	--lighter-blue: rgba(0, 21, 160, 0.3);
 
 	/* paddings */
@@ -30,14 +29,12 @@
 }
 
 body {
-	color: var(--balsa-blue);
+	color: var(--light-cream);
 	font-family: var(--font-circe);
 	font-weight: 300;
 	position: relative;
-	background-color: var(--light-bg);
-	/* background-color: #3d3d3d; */
-	/* background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png') repeat 50%/400px 200px; */
-	/* background-image: url('https://www.transparenttextures.com/patterns/black-orchid.png') repeat 50%/400px 200px; */
+	background-color: var(--balsa-blue);
+	background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png');
 }
 
 main {
@@ -78,14 +75,15 @@ h3 {
 }
 
 a {
-	color: var(--balsa-blue);
+	/* color: var(--balsa-blue); */
+	color: var(--light-cream);
 	text-decoration: none;
 }
 
 .link-button {
 	text-transform: uppercase;
 	font-weight: var(--weight-reg);
-	border-bottom: 1.5px solid var(--balsa-blue);
+	border-bottom: 1.5px solid var(--light-cream);
 	transition: all 0.2s;
 	display: inline-block;
 	width: fit-content;
@@ -114,4 +112,8 @@ ul {
 	.tagline {
 		font-size: var(--smaller-font);
 	}
+}
+
+li a.dev {
+	color: var(--lighter-cream);
 }

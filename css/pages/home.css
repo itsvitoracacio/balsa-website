@@ -30,7 +30,7 @@ body {
 }
 
 .alt-big-heading {
-	color: var(--light-bg);
+	color: var(--light-cream);
 	position: absolute;
 	z-index: 1;
 }
@@ -134,7 +134,7 @@ body {
 	width: 15rem;
 	height: 1.1rem;
 	z-index: 1;
-	background-color: var(--light-bg);
+	background-color: var(--light-cream);
 	/* background-color: red; */
 }
 

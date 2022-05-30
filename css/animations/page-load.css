@@ -1,9 +1,9 @@
 :root {
 	--water-fill-duration: 4.7s;
 	--site-load-duration: 5.2s;
-	--load-bg-color: var(--light-bg);
+	--load-bg-color: var(--light-cream);
 	--load-line-color: var(--balsa-blue);
-	--bowl-color: var(--light-bg);
+	--bowl-color: var(--light-cream);
 	--fill-color: var(--balsa-blue);
 }
 
@@ -70,7 +70,7 @@
 .loading-progress {
 	position: absolute;
 	z-index: 12;
-	color: var(--light-bg);
+	color: var(--light-cream);
 	line-height: 3rem;
 	font-size: 3.25rem;
 	font-weight: 700;

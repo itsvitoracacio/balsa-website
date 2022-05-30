@@ -9,7 +9,7 @@
 
 /* HOVER ON MENU TOGGLE FOR THE CIRCLE TO APPEAR */
 .menu-toggle {
-  position: relative;
+	position: relative;
 }
 
 .menu-toggle:hover::before {
@@ -48,11 +48,11 @@
 }
 
 .inside-toggle::before {
-	background-color: var(--light-bg);
+	background-color: var(--light-cream);
 }
 
 .outside-toggle::after {
-	color: var(--light-bg);
+	color: var(--light-cream);
 }
 
 .inside-toggle::after {
@@ -65,7 +65,7 @@
 
 /* .menu-toggle:hover {
 	clip-path: circle(100% at 50% 50%);
-} */ 
+} */
 
 /* .menu {
 	clip-path: circle(2.5rem at 92.25% 7.35%);
@@ -84,7 +84,7 @@
 
 /* CLICK TO OPEN MENU ANIMATION */
 .outside-toggle:hover ~ .menu {
-	color: var(--light-bg);
+	color: var(--light-cream);
 }
 
 .menu {

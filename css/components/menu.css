@@ -24,7 +24,7 @@
 
 /* This is the label associated with the checkbox */
 .menu .menu-toggle {
-	color: var(--light-bg);
+	color: var(--light-cream);
 	align-self: flex-end;
 	position: absolute;
 	top: 2.625rem;
@@ -36,7 +36,7 @@ nav li {
 }
 
 nav a {
-	color: var(--light-bg);
+	color: var(--light-cream);
 	font-size: 3rem;
 	font-weight: var(--weight-reg);
 	text-transform: uppercase;
@@ -52,5 +52,5 @@ nav a:hover {
 .menu-footer,
 .menu-footer .tagline,
 .menu-footer a {
-	color: var(--light-bg);
+	color: var(--light-cream);
 }

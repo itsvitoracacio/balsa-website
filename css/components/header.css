@@ -38,5 +38,5 @@ body:not(.homepage) .header-bottom {
 }
 
 .header-bottom .tagline {
-	color: var(--light-blue);
+	color: var(--lighter-cream);
 }
