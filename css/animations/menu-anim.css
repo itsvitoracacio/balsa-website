@@ -1,11 +1,11 @@
-.header-reveal {
+/* .header-reveal {
 	opacity: 0;
 	transition: 0.5s ease 0.1s;
 }
 
 .header-reveal-on {
 	opacity: 1;
-}
+} */
 
 /* HOVER ON MENU TOGGLE FOR THE CIRCLE TO APPEAR */
 .menu-toggle {
@@ -20,6 +20,7 @@
 	opacity: 1;
 }
 
+/* Circle */
 .menu-toggle::before {
 	content: '';
 	height: 5rem;
@@ -35,6 +36,7 @@
 	transition: all 0.3s;
 }
 
+/* "Menu" word */
 .menu-toggle::after {
 	content: 'Menu';
 	position: absolute;
@@ -44,7 +46,8 @@
 }
 
 .outside-toggle::before {
-	background-color: var(--balsa-blue);
+	/* background-color: var(--balsa-blue); */
+	background-color: var(--light-cream);
 }
 
 .inside-toggle::before {
@@ -52,35 +55,13 @@
 }
 
 .outside-toggle::after {
-	color: var(--light-cream);
+	/* color: var(--light-cream); */
+	color: var(--balsa-blue);
 }
 
 .inside-toggle::after {
 	color: var(--balsa-blue);
 }
-
-/* .menu-toggle {
-	background-color: #fff;
-} */
-
-/* .menu-toggle:hover {
-	clip-path: circle(100% at 50% 50%);
-} */
-
-/* .menu {
-	clip-path: circle(2.5rem at 92.25% 7.35%);
-	background-color: rgba(255, 0, 0, 0.15);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	right: 0;
-	top: 0;
-} */
-
-/* .menu,
-.menu .menu-toggle {
-	display: none;
-} */
 
 /* CLICK TO OPEN MENU ANIMATION */
 .outside-toggle:hover ~ .menu {

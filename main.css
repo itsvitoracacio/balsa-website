@@ -1,16 +1,25 @@
 @import url(./css/normalize.css);
 @import url(./css/style.css);
-@import url(./css/cursor.css);
+/* @import url(./css/cursor.css); */
+
+/* Components */
 @import url(./css/components/header.css);
 @import url(./css/components/footer.css);
 @import url(./css/components/menu.css);
+
+/* Pages */
 @import url(./css/pages/home.css);
 @import url(./css/pages/about.css);
-@import url(./css/pages/single-project.css);
-@import url(./css/animations/swup.css);
+@import url(./css/pages/contact.css);
+
+/* @import url(./css/pages/single-project.css); */
+
+/* Animations */
+@import url(./css/animations/menu-anim.css);
+
+/* @import url(./css/animations/swup.css);
 @import url(./css/animations/home-animation.css);
 @import url(./css/animations/page-load.css);
 @import url(./css/animations/elements-anim.css);
-@import url(./css/animations/header-anim.css);
 @import url(./css/animations/footer-anim.css);
-@import url(./css/animations/about-anim.css);
+@import url(./css/animations/about-anim.css); */

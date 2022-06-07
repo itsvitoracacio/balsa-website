@@ -38,7 +38,7 @@ body {
 }
 
 main {
-	opacity: 0;
+	/* opacity: 0; */
 }
 
 main:not(.home) {
@@ -75,7 +75,6 @@ h3 {
 }
 
 a {
-	/* color: var(--balsa-blue); */
 	color: var(--light-cream);
 	text-decoration: none;
 }

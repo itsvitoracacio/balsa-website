@@ -261,8 +261,10 @@
 
 /* BEGINNING OF THE CTA SECTION */
 .abt--cta-section {
-	background-color: var(--balsa-blue);
-	color: var(--light-cream);
+	/* background-color: var(--balsa-blue); */
+	background-color: var(--light-cream);
+	/* color: var(--light-cream); */
+	color: var(--balsa-blue);
 	height: 35vh;
 	justify-content: space-between;
 	margin-left: var(--hf-padding-horz);
@@ -279,8 +281,8 @@ section.abt--cta-section {
 }
 
 .abt--cta-section .link-button {
-	border-color: var(--light-cream);
-	color: var(--light-cream);
+	border-color: var(--balsa-blue);
+	color: var(--balsa-blue);
 }
 /* END OF THE CTA SECTION */
 

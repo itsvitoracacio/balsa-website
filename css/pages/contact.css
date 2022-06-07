@@ -1,0 +1,71 @@
+.contact-body header {
+	position: absolute;
+}
+
+main.contact-page {
+	padding: 2rem;
+	padding-top: 6.5rem;
+	padding-bottom: 0;
+}
+
+.contact-atf {
+	display: flex;
+	justify-content: space-between;
+	/* column-gap: 2rem; */
+}
+
+.contact-atf .left {
+	flex-basis: 56%;
+	background-color: #fff;
+}
+
+.contact-atf .right {
+	flex-basis: 40%;
+	height: 80vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.contact-piece summary {
+	display: flex;
+	align-items: center;
+	cursor: default;
+	padding: 1.25rem 0 0.95rem;
+	border-bottom: 1px solid var(--light-cream);
+
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.contact-piece summary::before {
+	content: url('/assets/arrow-right2.svg');
+	color: var(--light-cream);
+	padding-top: 0.25rem;
+	position: relative;
+	left: -0.35rem;
+	/* margin-right: 1rem; */
+}
+
+.contact-piece ul {
+	margin: 1.5rem 0 2rem;
+}
+
+.contact-piece li:first-of-type {
+	margin-top: 0.5rem;
+}
+
+.contact-piece li:last-of-type {
+	margin-top: 1.5rem;
+}
+
+.contact-piece span {
+	display: block;
+}
+
+.contact-piece span,
+.contact-piece li a {
+	line-height: 1.25rem;
+}

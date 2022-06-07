@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Balsa Arquitetura</title>
+
+		<!-- IMPORTING FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://use.typekit.net/rsz6fga.css" />
+
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="homepage">
+		<div class="page-loader-container">
+			<div class="rect-top"></div>
+			<div class="rect-bottom"></div>
+			<svg
+				class="load-filling"
+				width="1200"
+				height="700"
+				viewBox="119 135 150 150"
+				version="1.1"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					id="bowl"
+					fill-rule="evenodd"
+					fill="var(--bowl-color)"
+					d="M194.115,136.050 C234.545,136.050 267.321,168.722 267.321,209.025 C267.321,249.328 234.545,282.000 194.115,282.000 C153.684,282.000 120.909,249.328 120.909,209.025 C120.909,168.722 153.684,136.050 194.115,136.050 Z"
+				/>
+
+				<path
+					id="liquid"
+					fill-rule="evenodd"
+					clip-path="url(#clipPath)"
+					fill="var(--fill-color)"
+					d="M194.115,136.050 C234.545,136.050 267.321,168.722 267.321,209.025 C267.321,249.328 234.545,282.000 194.115,282.000 C153.684,282.000 120.909,249.328 120.909,209.025 C120.909,168.722 153.684,136.050 194.115,136.050 Z"
+				/>
+
+				<clipPath id="clipPath">
+					<path
+						id="clippingPath"
+						d="M802.000,464.000 C802.000,464.000 401.000,464.000 401.000,464.000 C401.000,464.000 400.000,464.000 400.000,464.000 C400.000,464.000 -1.000,464.000 -1.000,464.000 C-1.000,464.000 -2.498,292.434 -1.000,240.000 C103.869,240.000 120.123,189.000 200.000,189.000 C274.426,189.000 300.545,239.829 400.511,239.996 C504.916,239.829 521.255,189.000 601.000,189.000 C675.549,189.000 701.625,240.000 802.000,240.000 C799.004,240.000 802.000,464.000 802.000,464.000 Z"
+					/>
+				</clipPath>
+			</svg>
+		</div>
+		<header>
+			<div class="header-top">
+				<a href="/index.html"
+					><img
+						src="/assets/balsa-logos/logo-balsa-branco.svg"
+						alt="logo"
+						class="logo header-reveal"
+				/></a>
+				<input type="checkbox" name="menu-toggle" id="menu-toggle" />
+				<label
+					for="menu-toggle"
+					class="outside-toggle menu-toggle header-reveal"
+					>Menu</label
+				>
+				<div class="menu">
+					<label for="menu-toggle" class="inside-toggle menu-toggle"
+						>Menu</label
+					>
+					<nav>
+						<ul>
+							<li><a href="/index.html">Início</a></li>
+							<li><a href="/sobre.html">Balsa</a></li>
+							<li><a href="#">Projetos</a></li>
+							<li><a href="#">Imprensa</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</nav>
+					<div class="footer menu-footer">
+						<div class="footer-piece brand">
+							<img class="logo" src="/assets/balsa-logos/logo-balsa-branco.svg" alt="" />
+							<span class="tagline"
+								>Escritório de arquitetura em Belo Horizonte e São Paulo</span
+							>
+						</div>
+						<div class="footer-piece address">
+							<span>Av. Terra, 240</span>
+							<span>Sala 102, Santa Lúcia</span>
+							<span>CEP 30.360-500</span>
+							<span>Belo Horizonte/MG</span>
+						</div>
+						<div class="footer-piece contact">
+							<ul>
+								<li><a href="tel:03125519110">(31) 2551-9110</a></li>
+								<li>
+									<a href="https://www.instagram.com/balsaarquitetura/"
+										>@balsaarquitetura</a
+									>
+								</li>
+								<li>
+									<a href="mailto:contato@balsaarquitetura.com.br"
+										>contato@balsaarquitetura.com.br</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-piece legal">
+							<ul>
+								<li><a href="#">Política de Privacidade</a></li>
+								<li><a href="#">Nota de Direitos Autorais</a></li>
+								<li><a href="#" class="dev">Site desenvolvido por S.BAM</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<span class="tagline header-reveal"
+					>Escritório de arquitetura em Belo Horizonte e São Paulo</span
+				>
+			</div>
+		</header>
+		<main id="swup" class="home">
+			<section id="home-atf">
+				<div class="heading-container home-heading-reveal">
+					<span class="home-main-heading big-heading transition-fade-heading">
+						Lorem ipsum dolor sit amet veniam, consectetur adipising elit
+					</span>
+				</div>
+				<div class="project-details proj-reveal">
+					<span class="proj-name cur-proj-name">HOU MEI Asian Food Bar</span>
+					<span class="proj-category cur-proj-cat">Comer e Beber</span>
+				</div>
+				<div class="proj-count proj-reveal">
+					<span class="proj-number">
+						<span class="changing-number">01</span>
+					</span>
+					<span class="total-proj-count">04</span>
+				</div>
+				<div
+					class="proj-thumb-wrapper pic1 transition-proj-thumb-wrapper header-reveal"
+				>
+					<span
+						class="home-main-heading alt-big-heading transition-fade-heading"
+					>
+						Lorem ipsum dolor sit amet veniam, consectetur adipising elit
+					</span>
+					<a class="proj-thumb-link" href="#">
+						<div class="home-img-wrapper home-img-wrapper-reveal">
+							<img
+								class="main-proj-thumb home-img-reveal"
+								src="/balsa-website/assets/projetos/houmei/hm-1.jpeg"
+								alt=""
+							/>
+						</div>
+					</a>
+				</div>
+				<a class="bottom-button link-button button-reveal" href="#"
+					><span>Ver Todos Os Projetos</span></a
+				>
+			</section>
+		</main>
+		<footer>
+			<a
+				class="email header-reveal"
+				href="mailto:contato@balsaarquitetura.com.br"
+				>contato@balsaarquitetura.com.br</a
+			>
+		</footer>
+		<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+		<script src="script.js"></script>
+		<script src="homepage.js"></script>
+		<script src="elem-load-anim.js"></script>
+	</body>
+</html>

@@ -28,7 +28,9 @@ footer,
 }
 
 footer li,
-.menu-footer li {
+.menu-footer li,
+.brand span,
+.address span {
 	line-height: 1.25rem;
 }
 
@@ -36,6 +38,8 @@ footer li,
 .address {
 	display: flex;
 	flex-direction: column;
+	/* position: relative;
+	bottom: -0.1rem; */
 }
 
 .brand {
@@ -49,7 +53,7 @@ footer li,
 
 .legal ul {
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: column;
 	justify-content: space-evenly;
 	font-size: 0.75rem;
 }
@@ -75,6 +79,6 @@ footer li,
 		font-size: var(--smaller-font);
 	}
 	.legal a {
-		color: var(--balsa-blue);
+		color: var(--light-cream);
 	}
 }
