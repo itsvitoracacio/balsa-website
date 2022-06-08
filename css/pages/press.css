@@ -1,0 +1,11 @@
+.press-area {
+	display: flex;
+	flex-direction: column;
+}
+
+.press-row {
+  width: 100vw;
+  padding: 0 2rem;
+	display: flex;
+	justify-content: space-between;
+}
