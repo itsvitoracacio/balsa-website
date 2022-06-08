@@ -28,7 +28,7 @@ main.contact-page {
 	justify-content: flex-end;
 }
 
-.contact-piece summary {
+.contact-piece > span:first-of-type {
 	display: flex;
 	align-items: center;
 	cursor: default;
@@ -40,17 +40,16 @@ main.contact-page {
 	font-weight: 300;
 }
 
-.contact-piece summary::before {
+.contact-piece > span:first-of-type::before {
 	content: url('/assets/arrow-right2.svg');
 	color: var(--light-cream);
 	padding-top: 0.25rem;
 	position: relative;
 	left: -0.35rem;
-	/* margin-right: 1rem; */
 }
 
-.contact-piece ul {
-	margin: 1.5rem 0 2rem;
+.contact-piece-inner {
+	margin: 2rem 0 3rem;
 }
 
 .contact-piece li:first-of-type {
@@ -68,4 +67,12 @@ main.contact-page {
 .contact-piece span,
 .contact-piece li a {
 	line-height: 1.25rem;
+}
+
+.contact-piece .contact-piece-inner {
+	display: none;
+}
+
+.contact-piece.open .contact-piece-inner {
+	display: block;
 }
