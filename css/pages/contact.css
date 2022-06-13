@@ -31,7 +31,7 @@ main.contact-page {
 .contact-piece > span:first-of-type {
 	display: flex;
 	align-items: center;
-	cursor: default;
+	cursor: pointer;
 	padding: 1.25rem 0 0.95rem;
 	border-bottom: 1px solid var(--light-cream);
 
@@ -60,7 +60,7 @@ main.contact-page {
 	margin-top: 1.5rem;
 }
 
-.contact-piece span {
+.contact-piece-inner span {
 	display: block;
 }
 

@@ -27,7 +27,7 @@ header {
 	z-index: 1;
 }
 
-body:not(.homepage) .header-bottom {
+body.about-page .header-bottom {
 	display: none;
 }
 

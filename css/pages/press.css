@@ -1,11 +1,71 @@
+.press-page .header-bottom {
+	position: fixed;
+	bottom: 0;
+	padding-bottom: var(--hf-padding-vert);
+}
+
+.press-main {
+	display: flex;
+	justify-content: flex-end;
+	padding: 0 2rem;
+}
+
+.heading-area {
+	height: 100vh;
+	max-width: 425px;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	left: 2rem;
+}
+
+.heading-area h1 {
+	font-size: var(--h2-size);
+	font-weight: 700;
+	position: relative;
+	bottom: 3.225rem;
+}
+
 .press-area {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3rem;
+	padding-top: 20rem;
+	padding-bottom: 15rem;
+}
+
+.press-group {
+	display: flex;
+	column-gap: 1.25rem;
+}
+
+.press-row {
 	display: flex;
 	flex-direction: column;
 }
 
-.press-row {
-  width: 100vw;
-  padding: 0 2rem;
+.press-row h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.press-cell {
+	width: min-content;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+}
+
+.press-cell img {
+	display: block;
+	width: 240px;
+}
+
+.article-name {
+	margin-top: 0.5rem;
+}
+
+.proj-location a {
+	color: var(--lighter-cream);
+	font-size: var(--smaller-font);
 }

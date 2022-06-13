@@ -41,7 +41,7 @@ main {
 	/* opacity: 0; */
 }
 
-main:not(.home) {
+main.about-page {
 	padding-bottom: 5rem;
 }
 
