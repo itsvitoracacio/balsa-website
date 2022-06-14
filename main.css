@@ -4,20 +4,20 @@
 /* @import url(./css/cursor.css); */
 
 /* Components */
-@import url(./css/components/header.css);
-@import url(./css/components/footer.css);
-@import url(./css/components/menu.css);
+@import url(./components/header/header.css);
+@import url(./components/footer/footer.css);
+@import url(./components/menu/menu.css);
 
 /* Pages */
-@import url(./css/pages/home.css);
-@import url(./css/pages/about.css);
-@import url(./css/pages/press.css);
-@import url(./css/pages/contact.css);
+@import url(./page-home/home.css);
+@import url(./page-about/about.css);
+@import url(./page-press/press.css);
+@import url(./page-contact/contact.css);
 
 /* @import url(./css/pages/single-project.css); */
 
 /* Animations */
-@import url(./css/animations/menu-anim.css);
+@import url(./components/menu/menu-anim.css);
 
 /* @import url(./css/animations/swup.css);
 @import url(./css/animations/home-animation.css);
