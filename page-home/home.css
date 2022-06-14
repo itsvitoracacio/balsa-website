@@ -12,7 +12,7 @@ main.home {
 	display: flex;
 	align-items: flex-end;
 	padding-bottom: 6rem;
-	/* display: none; */ /* Line for testing homepage heading */
+	/* display: none; */
 }
 
 .projects-filter {
@@ -50,6 +50,14 @@ input[type='radio']:checked + label {
 
 .projects-grid li {
 	border: 1px solid var(--light-cream);
+}
+
+.projects-grid li:nth-of-type(1),
+.projects-grid li:nth-of-type(2),
+.projects-grid li:nth-of-type(3),
+.projects-grid li:nth-of-type(4),
+.projects-grid li:nth-of-type(5) {
+	border: none;
 }
 
 .projects-grid img {

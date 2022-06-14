@@ -16,7 +16,13 @@ main.contact-page {
 
 .contact-atf .left {
 	flex-basis: 56%;
-	background-color: #fff;
+	border: 1px solid var(--light-cream);
+}
+
+.contact-atf .left img {
+	max-width: 100%;
+	object-fit: scale-down;
+	display: block;
 }
 
 .contact-atf .right {
