@@ -68,11 +68,3 @@ main.contact-page {
 .contact-piece li a {
 	line-height: 1.25rem;
 }
-
-.contact-piece .contact-piece-inner {
-	display: none;
-}
-
-.contact-piece.open .contact-piece-inner {
-	display: block;
-}

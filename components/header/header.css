@@ -1,7 +1,8 @@
 header {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: space-between;
+	align-items: center;
 	padding-top: var(--hf-padding-vert);
 	padding-right: var(--hf-padding-horz);
 	padding-bottom: var(--hf-padding-vert);
@@ -10,16 +11,12 @@ header {
 	position: fixed;
 }
 
-.homepage header {
-	height: 100vh;
-}
-
-.header-top {
+/* .header-top {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
+} */
 
 .logo {
 	max-height: 50px;

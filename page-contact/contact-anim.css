@@ -1,0 +1,7 @@
+.contact-piece .contact-piece-inner {
+	display: none;
+}
+
+.contact-piece.open .contact-piece-inner {
+	display: block;
+}

@@ -45,26 +45,26 @@
 	transition: all 0.5s 0.1s;
 }
 
-.outside-toggle::before {
+.out-toggle::before {
 	/* background-color: var(--balsa-blue); */
 	background-color: var(--light-cream);
 }
 
-.inside-toggle::before {
+.in-toggle::before {
 	background-color: var(--light-cream);
 }
 
-.outside-toggle::after {
+.out-toggle::after {
 	/* color: var(--light-cream); */
 	color: var(--balsa-blue);
 }
 
-.inside-toggle::after {
+.in-toggle::after {
 	color: var(--balsa-blue);
 }
 
 /* CLICK TO OPEN MENU ANIMATION */
-.outside-toggle:hover ~ .menu {
+.out-toggle:hover ~ .menu {
 	color: var(--light-cream);
 }
 

@@ -5,10 +5,10 @@ if (pageIsHome) menuCheckbox.checked = 'false'
 // Making the menu appear on top of everything when it's open
 // When going back to the previous page, if the menu was left open, it stays open, but the zIndex isn't correct
 document
-	.querySelector('.outside-toggle')
+	.querySelector('.out-toggle')
 	.addEventListener('click', changeHeaderZIndex)
 document
-	.querySelector('.inside-toggle')
+	.querySelector('.in-toggle')
 	.addEventListener('click', changeHeaderZIndex)
 
 function changeHeaderZIndex() {

@@ -1,4 +1,4 @@
-.homepage footer,
+/* .homepage footer, */
 .press-page footer {
 	position: absolute;
 	bottom: 0;
@@ -7,7 +7,15 @@
 	padding-top: 0;
 }
 
-.homepage footer a,
+/* .homepage footer {
+	width: 100vw;
+	padding-left: 2rem;
+	display: flex;
+	justify-content: space-between;
+	color: var(--lighter-cream);
+} */
+
+/* .homepage footer a, */
 .press-page footer a {
 	color: var(--lighter-cream);
 }
