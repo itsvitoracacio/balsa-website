@@ -4,11 +4,11 @@
 
 :root {
 	/* colors */
-	--balsa-blue: #001aa1;
+	--balsa-blue: rgb(0, 22, 160);
 	--light-cream: #fcfaf7;
 	--lighter-cream: rgba(245, 238, 228, 0.66);
-	--light-blue: rgba(0, 21, 160, 0.6);
-	--lighter-blue: rgba(0, 21, 160, 0.3);
+	--light-blue: rgba(0, 22, 160, 0.6);
+	--lighter-blue: rgba(0, 22, 160, 0.3);
 
 	/* paddings */
 	--hf-padding-vert: clamp(1rem, 4vw, 1.5rem);
@@ -101,7 +101,7 @@ ul {
 
 .tagline {
 	display: inline-block;
-	width: 11rem;
+	width: 12.3rem;
 }
 
 @media screen and (min-width: 768px) {

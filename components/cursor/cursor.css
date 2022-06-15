@@ -1,4 +1,4 @@
-body.homepage {
+body {
 	cursor: none;
 	overflow-x: hidden;
 }
@@ -17,6 +17,7 @@ body.homepage {
 	background-color: var(--light-cream);
 	width: 10px;
 	height: 10px;
+	z-index: 11;
 }
 
 .outer-cursor {

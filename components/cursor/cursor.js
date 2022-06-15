@@ -1,6 +1,6 @@
 // Styling the custom cursor
 const cursor = document.querySelector('.inner-cursor')
-const cursorWrapper = document.querySelector('.outer-cursor')
+// const cursorWrapper = document.querySelector('.outer-cursor')
 
 // Inner cursor
 window.addEventListener('mousemove', e => {
@@ -31,8 +31,9 @@ window.addEventListener('mousemove', e => {
 	if (!listItem.dataset.projName) projName.style.opacity = 0
 	else {
 		projName.innerText = listItem.dataset.projName
+		projName.style.textTransform = 'uppercase'
 		projName.style.position = 'absolute'
-		// projName.style.fontWeight = '700'
+		projName.style.fontWeight = '700'
 		projName.style.top = `${e.clientY + 15 + window.scrollY}px`
 		projName.style.left = `${e.clientX}px`
 		projName.style.opacity = 1
