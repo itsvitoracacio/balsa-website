@@ -47,7 +47,7 @@ main.contact-page {
 }
 
 .contact-piece > span:first-of-type::before {
-	content: url('/assets/arrow-right2.svg');
+	content: url('./balsa-website/assets/arrow-right2.svg');
 	color: var(--light-cream);
 	padding-top: 0.25rem;
 	position: relative;
