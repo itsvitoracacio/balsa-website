@@ -1,24 +1,24 @@
 /* General */
-@import url(./balsa-website/css/normalize.css);
-@import url(./balsa-website/css/style.css);
+@import url(./css/normalize.css);
+@import url(./css/style.css);
 
 /* Components */
-@import url(./balsa-website/components/cursor/cursor.css);
-@import url(./balsa-website/components/header/header.css);
-@import url(./balsa-website/components/footer/footer.css);
-@import url(./balsa-website/components/menu/menu.css);
+@import url(./components/cursor/cursor.css);
+@import url(./components/header/header.css);
+@import url(./components/footer/footer.css);
+@import url(./components/menu/menu.css);
 
 /* Pages */
-@import url(./balsa-website/page-home/home.css);
-@import url(./balsa-website/page-about/about.css);
-@import url(./balsa-website/page-press/press.css);
-@import url(./balsa-website/page-contact/contact.css);
+@import url(./page-home/home.css);
+@import url(./page-about/about.css);
+@import url(./page-press/press.css);
+@import url(./page-contact/contact.css);
 
 /* @import url(./css/pages/single-project.css); */
 
 /* Animations */
-@import url(./balsa-website/components/menu/menu-anim.css);
-@import url(./balsa-website/page-contact/contact-anim.css);
+@import url(./components/menu/menu-anim.css);
+@import url(./page-contact/contact-anim.css);
 
 /* @import url(./animations/page-load.css); */
 /* @import url(./css/animations/swup.css);
