@@ -14,7 +14,7 @@
 @import url(/balsa-website/page-press/press.css);
 @import url(/balsa-website/page-contact/contact.css);
 
-/* @import url(/css/pages/single-project.css); */
+/* @import url(./css/pages/single-project.css); */
 
 /* Animations */
 @import url(/balsa-website/components/menu/menu-anim.css);
