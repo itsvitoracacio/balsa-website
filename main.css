@@ -1,9 +1,9 @@
 /* General */
 @import url(./css/normalize.css);
 @import url(./css/style.css);
-/* @import url(./css/cursor.css); */
 
 /* Components */
+@import url(././components/cursor/cursor.css);
 @import url(./components/header/header.css);
 @import url(./components/footer/footer.css);
 @import url(./components/menu/menu.css);
@@ -20,9 +20,9 @@
 @import url(./components/menu/menu-anim.css);
 @import url(./page-contact/contact-anim.css);
 
+/* @import url(./animations/page-load.css); */
 /* @import url(./css/animations/swup.css);
 @import url(./css/animations/home-animation.css);
-@import url(./css/animations/page-load.css);
 @import url(./css/animations/elements-anim.css);
 @import url(./css/animations/footer-anim.css);
 @import url(./css/animations/about-anim.css); */

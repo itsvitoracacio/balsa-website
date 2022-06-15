@@ -16,7 +16,7 @@ main.contact-page {
 
 .contact-atf .left {
 	flex-basis: 56%;
-	border: 1px solid var(--light-cream);
+	/* border: 1px solid var(--light-cream); */
 }
 
 .contact-atf .left img {

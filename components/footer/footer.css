@@ -83,9 +83,3 @@ footer li,
 		color: var(--light-cream);
 	}
 }
-
-footer.minimal {
-	/* display: flex; */
-	/* justify-content: space-between; */
-	/* width: 100vw; */
-}

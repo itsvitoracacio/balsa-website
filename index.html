@@ -19,6 +19,61 @@
 		<link rel="stylesheet" href="./main.css" />
 	</head>
 	<body class="homepage">
+		<div class="inner-cursor"></div>
+		<!-- <div class="outer-cursor"></div> -->
+		<!-- <div class="page-loading-anim">
+			<svg
+				class="load-filling"
+				width="1200"
+				height="700"
+				viewBox="119 135 150 150"
+				version="1.1"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					id="bowl"
+					fill-rule="evenodd"
+					fill="var(--bowl-color)"
+					d="
+					M120.909,136.050
+					L267.321,136.050
+					L267.321,282.000
+					L120.909,282.000
+					Z"
+				/>
+
+				<path
+					id="liquid"
+					fill-rule="evenodd"
+					clip-path="url(#clipPath)"
+					fill="var(--fill-color)"
+					d="
+					M120.909,136.050
+					L267.321,136.050
+					L267.321,282.000
+					L120.909,282.000
+					Z"
+				/>
+
+				<clipPath id="clipPath">
+					<path
+						id="clippingPath"
+						d="
+						M802.000,464.000
+						C802.000,464.000 401.000,464.000 401.000,464.000
+						C401.000,464.000 400.000,464.000 400.000,464.000
+						C400.000,464.000 -1.000,464.000 -1.000,464.000
+						C-1.000,464.000 -2.498,292.434 -1.000,240.000
+						C103.869,240.000 120.123,189.000 200.000,189.000
+						C274.426,189.000 300.545,239.829 400.511,239.996
+						C504.916,239.829 521.255,189.000 601.000,189.000
+						C675.549,189.000 701.625,240.000 802.000,240.000
+						C799.004,240.000 802.000,464.000 802.000,464.000
+						Z"
+					/>
+				</clipPath>
+			</svg>
+		</div> -->
 		<header>
 			<a href="./index.html"
 				><img
@@ -99,7 +154,11 @@
 				<h1>Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
 			</div>
 			<ul class="projects-grid">
-				<li class="grid-block-rect" data-proj-cat="">
+				<li
+					class="grid-block-rect cabernet-garagem"
+					data-proj-cat="Comer e Beber"
+					data-proj-name="Cabernet Garagem"
+				>
 					<article>
 						<img
 							src="./assets/projetos/cabernet-garagem/cabernet-garagem.jpg"
@@ -108,19 +167,31 @@
 						<h2></h2>
 					</article>
 				</li>
-				<li class="grid-block-rect" data-proj-cat="">
+				<li
+					class="grid-block-rect"
+					data-proj-cat="Comer e Beber"
+					data-proj-name="Hou Mei Asian Food Bar"
+				>
 					<article>
 						<img src="./assets/projetos/houmei/houmei.jpg" alt="" />
 						<h2></h2>
 					</article>
 				</li>
-				<li class="grid-block-vert" data-proj-cat="">
+				<li
+					class="grid-block-vert"
+					data-proj-cat="Comer e Beber"
+					data-proj-name="Achega"
+				>
 					<article>
 						<img src="/assets/projetos/achega/achega.jpg" alt="" />
 						<h2></h2>
 					</article>
 				</li>
-				<li class="grid-block-rect" data-proj-cat="">
+				<li
+					class="grid-block-rect"
+					data-proj-cat="Comer e Beber"
+					data-proj-name="OOP Café, Loja e Torrefação"
+				>
 					<article>
 						<img
 							src="./assets/projetos/oop-torrefacao/oop-torrefacao.jpg"
@@ -129,7 +200,11 @@
 						<h2></h2>
 					</article>
 				</li>
-				<li class="grid-block-rect" data-proj-cat="">
+				<li
+					class="grid-block-rect"
+					data-proj-cat="Comer e Beber"
+					data-proj-name="OOP Café"
+				>
 					<article>
 						<img src="./assets/projetos/oop-cafe/oop-cafe.jpg" alt="" />
 						<h2></h2>
@@ -262,5 +337,6 @@
 			</div>
 		</footer>
 		<script src="./components/menu/menu.js"></script>
+		<script src="./components/cursor/cursor.js"></script>
 	</body>
 </html>

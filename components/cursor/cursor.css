@@ -1,0 +1,44 @@
+body.homepage {
+	cursor: none;
+	overflow-x: hidden;
+}
+
+.inner-cursor,
+.outer-cursor {
+	border-radius: 50%;
+	position: absolute;
+	z-index: 0;
+	top: -2rem;
+	left: -2rem;
+	pointer-events: none;
+}
+
+.inner-cursor {
+	background-color: var(--light-cream);
+	width: 10px;
+	height: 10px;
+}
+
+.outer-cursor {
+	border: 1px solid var(--light-cream);
+	/* width: 4px; */
+	/* height: 4px; */
+	padding: 0.75rem;
+	/* transition-duration: 500ms;
+	background-color: transparent; */
+	/* transition: top 0.1s, left 0.1s; */
+	/* transition-timing-function: ease-out; */
+}
+
+.cursorClick {
+	animation: cursorClick 0.2s forwards;
+}
+
+@keyframes cursorClick {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.7);
+	}
+}
