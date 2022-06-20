@@ -100,8 +100,8 @@ ul {
 }
 
 .tagline {
-	display: inline-block;
-	width: 12.3rem;
+	display: none;
+	width: 13.65rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -109,6 +109,7 @@ ul {
 		max-width: 50%;
 	}
 	.tagline {
+		display: inline-block;
 		font-size: var(--smaller-font);
 	}
 }

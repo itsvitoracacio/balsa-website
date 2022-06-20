@@ -6,7 +6,6 @@
 	height: 100vh;
 	background-color: var(--light-cream);
 	background-color: var(--balsa-blue);
-	/* background-image: url('https://www.transparenttextures.com/patterns/egg-shell.png'); */
 	z-index: 10;
 	display: flex;
 	flex-direction: column;
@@ -30,9 +29,12 @@
 	top: 2.625rem;
 }
 
+nav {
+	padding-top: 4.5rem;
+}
+
 nav li {
 	margin: 10px 0;
-	/* display: inline-block; */
 }
 
 nav a {
@@ -53,4 +55,10 @@ nav a:hover {
 .menu-footer .tagline,
 .menu-footer a {
 	color: var(--light-cream);
+}
+
+@media screen and (min-width: 678px) {
+	nav {
+		padding-top: 0;
+	}
 }
