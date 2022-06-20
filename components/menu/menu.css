@@ -57,8 +57,15 @@ nav a:hover {
 	color: var(--light-cream);
 }
 
+.menu-footer .tagline {
+	display: none;
+}
+
 @media screen and (min-width: 678px) {
 	nav {
 		padding-top: 0;
+	}
+	.menu-footer .tagline {
+		display: inline-block;
 	}
 }

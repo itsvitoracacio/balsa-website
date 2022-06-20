@@ -100,7 +100,6 @@ ul {
 }
 
 .tagline {
-	display: none;
 	width: 13.65rem;
 }
 
@@ -109,7 +108,6 @@ ul {
 		max-width: 50%;
 	}
 	.tagline {
-		display: inline-block;
 		font-size: var(--smaller-font);
 	}
 }
