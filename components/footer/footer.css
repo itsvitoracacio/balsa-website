@@ -69,15 +69,21 @@ footer li,
 	.legal {
 		width: unset;
 	}
-	.address {
-		display: flex;
-		flex-direction: column;
+	.brand {
+		margin-bottom: 0;
 	}
 	.legal ul {
 		display: block;
-		font-size: var(--smaller-font);
+		/* font-size: var(--smaller-font); */
 	}
 	.legal a {
 		color: var(--light-cream);
+	}
+}
+
+@media screen and (min-width: 825px) {
+	.address {
+		display: flex;
+		flex-direction: column;
 	}
 }
