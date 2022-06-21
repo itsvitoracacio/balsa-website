@@ -1,3 +1,7 @@
+.press-page {
+	overflow-x: hidden;
+}
+
 .press-page .header-bottom {
 	position: fixed;
 	bottom: 0;
@@ -12,7 +16,7 @@
 
 .heading-area {
 	align-self: center;
-	height: 70vh;
+	/* height: 70vh; */
 	max-width: 425px;
 	display: flex;
 	flex-direction: column;
@@ -39,11 +43,19 @@
 	row-gap: 3rem;
 	padding-top: 20rem;
 	padding-bottom: 15rem;
+	overflow-x: scroll;
+}
+
+.press-area::-webkit-scrollbar,
+.press-group::-webkit-scrollbar {
+	display: none;
 }
 
 .press-group {
 	display: flex;
 	column-gap: 1.25rem;
+	overflow-y: hidden;
+	overflow-x: scroll;
 }
 
 .press-row {
@@ -77,6 +89,14 @@
 	font-size: var(--smaller-font);
 }
 
+.press-page footer {
+	width: calc(100%);
+	padding-left: 2rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--smaller-font);
+}
+
 @media screen and (min-width: 840px) {
 	.press-main {
 		justify-content: flex-end;
@@ -87,10 +107,17 @@
 	.press-main .tagline {
 		display: inline-block;
 		position: fixed;
-		/* bottom: 0.5rem; */
-		/* bottom: 0; */
 		bottom: var(--hf-padding-vert);
-		line-height: 1.25em;
+	}
+	.press-main .tagline,
+	.press-page footer {
+		line-height: 1.25rem;
+	}
+	.press-page footer {
+		justify-content: flex-end;
+	}
+	.press-page footer .tagline {
+		display: none;
 	}
 }
 

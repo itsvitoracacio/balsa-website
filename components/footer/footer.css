@@ -53,6 +53,10 @@ footer li,
 	font-size: 0.75rem;
 }
 
+.legal li:first-of-type {
+	line-height: 1.15;
+}
+
 .legal a {
 	color: var(--light-blue);
 }
@@ -74,7 +78,6 @@ footer li,
 	}
 	.legal ul {
 		display: block;
-		/* font-size: var(--smaller-font); */
 	}
 	.legal a {
 		color: var(--light-cream);

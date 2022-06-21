@@ -101,6 +101,10 @@ ul {
 
 .tagline {
 	width: 13.65rem;
+	/* line-height: 1.15em; */
+}
+footer {
+	/* font-size: var(--smaller-font); */
 }
 
 @media screen and (min-width: 768px) {
