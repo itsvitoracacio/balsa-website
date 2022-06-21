@@ -34,6 +34,12 @@ footer li,
 	line-height: 1.25rem;
 }
 
+.brand,
+.address,
+.contact {
+	font-size: var(--smaller-font);
+}
+
 .brand {
 	display: flex;
 	flex-direction: column;
@@ -53,12 +59,12 @@ footer li,
 	font-size: 0.75rem;
 }
 
-.legal li:first-of-type {
+.menu-footer .legal li:first-of-type {
 	line-height: 1.15;
 }
 
 .legal a {
-	color: var(--light-blue);
+	color: var(--light-cream);
 }
 
 @media screen and (min-width: 768px) {

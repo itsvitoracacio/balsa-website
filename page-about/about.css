@@ -68,7 +68,7 @@
 
 /* BEGINNING OF THE ABOUT THE STUDIO SECTION */
 .abt--about-studio {
-	row-gap: 5rem;
+	row-gap: 3rem;
 }
 
 .about-studio-text p {
@@ -293,6 +293,9 @@ section.abt--cta-section {
 @media screen and (min-width: 768px) {
 	.abt--atf img {
 		height: unset;
+	}
+	.abt--about-studio {
+		row-gap: 5rem;
 	}
 	.about-studio-text,
 	.about-team-text {
