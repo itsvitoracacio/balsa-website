@@ -1,7 +1,8 @@
-.about-page {
+.about-main {
 	display: flex;
 	flex-direction: column;
 	row-gap: 10rem; /* come back here */
+	padding-bottom: 7.5rem;
 }
 
 .abt--section {
@@ -19,14 +20,7 @@
 	justify-content: flex-end;
 	height: 100vh;
 }
-.abt--atf .img-wrapper {
-	/* height: 50vh; */
-	/* width: 100%; */
-	/* background-image: url(./../../assets/projetos/houmei/hm-1.jpeg); */
-	/* background-size:cover; */
-	/* background-position: center; */
-	/* overflow: hidden; */
-}
+
 .abt--atf img {
 	max-height: 50vh;
 	width: 100%;
@@ -47,11 +41,9 @@
 
 .about-studio-text div,
 .about-team-text p {
-	/* max-width: 50%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	/* padding-left: 7rem; */
 }
 
 .about-studio-text p:nth-of-type(2) {
@@ -93,41 +85,6 @@
 	font-size: var(--smaller-font);
 }
 /* END OF THE ABOUT THE STUDIO SECTION */
-
-/* BEGINNING OF THE TESTIMONIAL SECTION */
-.abt--testimonial p {
-	font-size: 2rem;
-	margin-bottom: 2.5rem;
-	position: relative;
-}
-
-.abt--testimonial p::before {
-	content: '"';
-	position: absolute;
-	top: -9rem;
-	left: -2rem;
-	font-family: 'BIZ UDPGothic', sans-serif;
-	font-family: var(--font-proj-number);
-	font-size: 10rem;
-	transform: rotate(180deg);
-	color: var(--lighter-blue);
-}
-
-/* Visually centering the section elements */
-.abt--testimonial p,
-.abt--testimonial > span {
-	padding-left: 3rem;
-	width: 78%;
-}
-
-.client-name {
-	font-weight: var(--weight-reg);
-}
-
-.client-company {
-	color: var(--light-blue);
-}
-/* END OF THE TESTIMONIAL SECTION */
 
 /* BEGINNING OF THE SERVICES SECTION */
 .abt--expertise {
@@ -265,9 +222,7 @@
 
 /* BEGINNING OF THE CTA SECTION */
 .abt--cta-section {
-	/* background-color: var(--balsa-blue); */
 	background-color: var(--light-cream);
-	/* color: var(--light-cream); */
 	color: var(--balsa-blue);
 	height: 35vh;
 	justify-content: space-between;

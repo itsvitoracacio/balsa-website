@@ -1,8 +1,8 @@
-.contact-body header {
+.contact-page header {
 	position: absolute;
 }
 
-main.contact-page {
+main.contact-main {
 	padding: 6.5rem 2rem 2rem;
 }
 
@@ -17,7 +17,6 @@ main.contact-page {
 	flex-basis: 56%;
 	display: flex;
 	align-items: flex-end;
-	/* border: 1px solid var(--light-cream); */
 }
 
 .contact-atf .left img {
@@ -42,7 +41,6 @@ main.contact-page {
 	align-items: center;
 	cursor: pointer;
 	padding: 1.25rem 0 0.95rem;
-	/* padding-left: 1rem; */
 	border-bottom: 1px solid var(--light-cream);
 
 	text-transform: uppercase;
@@ -59,11 +57,6 @@ main.contact-page {
 	left: -0.35rem;
 }
 
-.contact-piece-inner {
-	margin: 2rem 0;
-	line-height: 1.25em;
-}
-
 .contact-piece li:first-of-type {
 	margin-top: 0.5rem;
 }
@@ -72,20 +65,28 @@ main.contact-page {
 	margin-top: 1.5rem;
 }
 
-.contact-piece-inner span {
-	display: block;
-}
-
 .contact-piece span,
 .contact-piece li a {
 	line-height: 1.25em;
 }
 
+.contact-piece-inner {
+	margin: 2rem 0;
+	line-height: 1.25em;
+}
+
+.contact-piece-inner span {
+	display: block;
+}
+
 @media screen and (min-width: 768px) {
-	main.contact-page {
+	main.contact-main {
 		padding-bottom: 0;
 	}
 	.contact-atf {
 		flex-direction: row;
+	}
+	.contact-piece-inner {
+		margin: 2rem 0 4rem;
 	}
 }
