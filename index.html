@@ -101,7 +101,8 @@
 							alt=""
 						/>
 						<span class="tagline"
-							>Escritório de arquitetura em Belo Horizonte, Rio e São Paulo</span
+							>Escritório de arquitetura em Belo Horizonte, Rio e São
+							Paulo</span
 						>
 					</div>
 					<div class="footer-piece address">
@@ -138,7 +139,7 @@
 			</div>
 		</header>
 		<main class="home">
-			<fieldset class="projects-filter">
+			<fieldset id="projFilterLvl1" class="projects-filter">
 				<input type="radio" name="projects" value="todos" id="todos" checked />
 				<label for="todos">Todos</label>
 				<input type="radio" name="projects" value="comer-e-beber" id="comer" />
@@ -149,6 +150,26 @@
 				<label for="res">Residencial </label>
 				<input type="radio" name="projects" value="diversos" id="cult" />
 				<label for="cult">Patrimônio Cultural</label>
+			</fieldset>
+			<fieldset class="projects-filter filter-level-2 lvl2-res">
+				<input type="checkbox" name="projects-res" id="casas" />
+				<label for="casas">Casas</label>
+				<input type="checkbox" name="projects-res" id="aptos" />
+				<label for="aptos">Apartamentos</label>
+			</fieldset>
+			<fieldset class="projects-filter filter-level-2 lvl2-comer">
+				<input type="checkbox" name="projects-comer" id="bares" />
+				<label for="bares">Bares</label>
+				<input type="checkbox" name="projects-comer" id="rests" />
+				<label for="rests">Restaurantes</label>
+				<input type="checkbox" name="projects-comer" id="doces" />
+				<label for="doces">Docerias</label>
+				<input type="checkbox" name="projects-comer" id="cafes" />
+				<label for="cafes">Cafeterias</label>
+				<input type="checkbox" name="projects-comer" id="burgers" />
+				<label for="burgers">Hamburguerías</label>
+				<input type="checkbox" name="projects-comer" id="cozinhas" />
+				<label for="cozinhas">Cozinhas Industriais</label>
 			</fieldset>
 			<div class="heading-wrapper">
 				<h1>Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
@@ -338,6 +359,7 @@
 			</div>
 		</footer>
 		<script src="./components/menu/menu.js"></script>
-		<script src="./components/cursor/cursor.js"></script>
+		<script src="./page-home/home.js"></script>
+		<!-- <script src="./components/cursor/cursor.js"></script> -->
 	</body>
 </html>

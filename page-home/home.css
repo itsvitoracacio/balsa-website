@@ -42,8 +42,29 @@ main.home {
 	display: none;
 }
 
-input[type='radio']:checked + label {
+input[type='radio']:checked + label,
+input[type='checkbox']:checked + label {
 	color: var(--light-cream);
+}
+
+.filter-level-2 {
+	top: calc(2.75rem + 2.75rem);
+	justify-content: center;
+	column-gap: 2rem;
+	row-gap: 1rem;
+	display: none;
+}
+
+.filter-level-2.show {
+	display: flex;
+}
+
+.lvl2-comer {
+	left: calc(27.5% - 2.75rem);
+}
+
+.lvl2-res {
+	left: calc(27.5% + 4.5rem);
 }
 
 .projects-grid {
