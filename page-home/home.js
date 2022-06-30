@@ -26,6 +26,108 @@ const toggleLvl2 = e => {
 	if (lvl2ToShow) lvl2ToShow.classList.add('show')
 }
 
+const showFilteredRadio = e => {
+	const domProjs = Array.from(document.querySelector('.projects-grid').children)
+	const clickedCat = e.target.innerText.toLowerCase()
+
+	let projsToShow, projsToHide
+
+	if (clickedCat === 'todos') projsToShow = domProjs
+	else {
+		projsToShow = domProjs.filter(proj =>
+			proj.dataset.projCat.split(',').includes(clickedCat)
+		)
+		projsToHide = domProjs.filter(
+			proj => !proj.dataset.projCat.split(',').includes(clickedCat)
+		)
+	}
+
+	projsToShow.forEach(proj => {
+		proj.classList.remove('hideFromGrid')
+		proj.classList.add('showOnGrid')
+	})
+
+	if (projsToHide) {
+		projsToHide.forEach(proj => {
+			proj.classList.remove('showOnGrid')
+			proj.classList.add('hideFromGrid')
+		})
+	}
+}
+
+const filterRadio = e => {
+	toggleLvl2(e)
+	showFilteredRadio(e)
+}
+
 // Adding the event listener to all lvl1 filter options labels
 const lvl1OptionsLabels = lvl1Options.filter(el => el.tagName === 'LABEL')
-lvl1OptionsLabels.forEach(label => label.addEventListener('click', toggleLvl2))
+lvl1OptionsLabels.forEach(label => label.addEventListener('click', filterRadio))
+
+const projDb = [
+	{
+		projId: 1,
+		projName: 'Cabernet Garagem',
+		projUrl: '',
+		projThumb: '',
+		projOrder: 0,
+		projCat: ['comer e beber', 'bares', 'restaurantes'],
+		projLocation: '',
+		projYear: '',
+		builtArea: '',
+		suppliers: [],
+		photosBy: '',
+	},
+	{
+		projId: 2,
+		projName: 'Hou Mei Asian Food Bar',
+		projUrl: '',
+		projThumb: '',
+		projOrder: 0,
+		projCat: ['comer e beber', 'restaurantes'],
+		projLocation: '',
+		projYear: '',
+		builtArea: '',
+		suppliers: [],
+		photosBy: '',
+	},
+	{
+		projId: 3,
+		projName: 'Achega',
+		projUrl: '',
+		projThumb: '',
+		projOrder: 0,
+		projCat: ['comer e beber', 'cafeterias', 'lojas'],
+		projLocation: '',
+		projYear: '',
+		builtArea: '',
+		suppliers: [],
+		photosBy: '',
+	},
+	{
+		projId: 4,
+		projName: 'OOP Café e Torrefação',
+		projUrl: '',
+		projThumb: '',
+		projOrder: 0,
+		projCat: ['comer e beber', 'cafeterias', 'lojas'],
+		projLocation: '',
+		projYear: '',
+		builtArea: '',
+		suppliers: [],
+		photosBy: '',
+	},
+	{
+		projId: 5,
+		projName: 'But First, Café',
+		projUrl: '',
+		projThumb: '',
+		projOrder: 0,
+		projCat: ['comer e beber', 'cafeterias'],
+		projLocation: '',
+		projYear: '',
+		builtArea: '',
+		suppliers: [],
+		photosBy: '',
+	},
+]
